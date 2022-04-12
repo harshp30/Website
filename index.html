@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Harsh Patel</title>
+  <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg"/>
+
+  <!-- CSS Style Sheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <section id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+      <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+
+        <a href="#title"><img class="logo" alt="LOGO" src="images/logo.jpg"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about-me">ABOUT ME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resume">RESUME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-me">CONTACT ME</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- <h1 class="name">HARSH PATEL</h1> -->
+      <h3 class="name">Harsh Patel</h3>
+      <!-- <p class="subtitle">Welcome to my website!</p> -->
+        <div style="text-align: center;">
+          <a class="text-arrow">Scroll down to see more about me and my experiences.</a>
+        </div>
+
+
+        <div class="arrow bounce">
+          <a class="fa fa-arrow-down fa-2x"></a>
+        </div>
+
+  </section>
+
+  
+
+  <section id="about-me">
+
+    <h2 class="section-heading about-me-title">About Me</h2>
+    <h4 class="about-me-text">A little bit about me and my career so far.</h4>
+    <div>
+      <div class="about-me-blocks" style="margin-top: 20px; font-size: 2rem;">
+        <p>I am currently a Computer Engineering student and the University of Waterloo.</p>
+        <p>Currently I am on a co-op term as a Software Engineer at Friendlier.</p>
+      </div>
+      <div class="about-me-blocks" style="margin-left: 20px; margin-top: 50px;">
+        <!-- <p class="waterloo-logo-text">Candidate for B.A.S.c in Computer Engineering</p> -->
+        <img style="margin-right: 13%" class="waterloo-logo" src="images/University_of_Waterloo_seal.svg.png" onclick="window.open('https://uwaterloo.ca/future-students/programs/computer-engineering')">
+        <img class="waterloo-logo" src="images/friendlier-circle.png" onclick="window.open('https://www.friendlier.ca/')">
+      </div>
+      <!-- <div class="about-me-blocks" style="margin-top: 20px; font-size: 2rem;">
+        <p>Outside of work, I spend my time playing sports like basketball and volleyball.</p>
+      </div> -->
+    </div>
+
+  </section>
+
+
+
+  <section id="portfolio">
+    <h2 class="section-heading portfolio-title">Portfolio</h2>
+    <h4 class="about-me-text">Explore some of the projects I have worked on throughout the past few years, and some that are currently in progress.</h4>
+    <div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal" style="margin-left: 20px; margin-right: 20px;">
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Heart Disease Classification</p>
+        <card class="HeartClassification w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="0"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">California Housing Regression</p>
+        <card class="CaliforniaHousing w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="1"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Dog Breed Image Convolution</p>
+        <card class="DogBreed w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="2"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Lecture Assist</p>
+        <card class="LectureAssist w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="3"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Autonomous RC Car</p>
+        <card class="AutonomousRC w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="4"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Basketball Mini Hoop Shot Tracker</p>
+        <card class="BasketballMini w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="5"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Hand Gesture Controlled RC Car</p>
+        <card class="HandGestured w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="6"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">PC LED Lights</p>
+        <card class="PCLed w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="7"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Inventory Management System</p>
+        <card class="InventorySystem w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="8"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Physics Solver</p>
+        <card class="PhysicsSolver w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="9"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Home Renovation Calculator</p>
+        <card class="HomeCalc w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="10"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Simple Calculator</p>
+        <card class="SimpleCalc w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="11"></card>
+      </div>
+    </div>
+    
+    <!-- Modal -->
+    <!-- 
+    This part is straight out of Bootstrap docs. Just a carousel inside a modal.
+    -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: black">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselExample" class="carousel slide">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExample" data-slide-to="1"></li>
+                <li data-target="#carouselExample" data-slide-to="2"></li>
+                <li data-target="#carouselExample" data-slide-to="3"></li>
+                <li data-target="#carouselExample" data-slide-to="4"></li>
+                <li data-target="#carouselExample" data-slide-to="5"></li>
+                <li data-target="#carouselExample" data-slide-to="6"></li>
+                <li data-target="#carouselExample" data-slide-to="7"></li>
+                <li data-target="#carouselExample" data-slide-to="8"></li>
+                <li data-target="#carouselExample" data-slide-to="9"></li>
+                <li data-target="#carouselExample" data-slide-to="10"></li>
+                <li data-target="#carouselExample" data-slide-to="11"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="margin-bottom: 50px;">
+                  <h5>Heart Disease Classification</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification/blob/main/heart-disease.ipynb')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">A combination of <b>Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas, NumPy, Seaborn</b> and a Kaggle provided dataset allowed me to create a classification model that helps predict whether a patient has heart disease given certain clinical parameters.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>California Housing Regression</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/CaliforniaHousingRegression')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/CaliforniaHousingRegression/blob/main/california-housing-regression.ipynb')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">A combination of <b>Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas, NumPy, Seaborn</b> and a Kaggle provided dataset allowed me to create a regression model that helps predict the price of a home in California based on it's location and some other factors.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>Dog Breed Image Convolution</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification/blob/main/heart-disease.ipynb')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">A combination of <b>Google Colab, Tensorflow, MatplotLib, Pandas, NumPy</b> and a Kaggle provided dataset allowed me to create a predictive model that helps predict whether the breed of a dog from just the image.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5 style="margin-bottom: 12px;">Lecture Assist</h5>
+                  <img style="width: 12%;" src="./images/clock.png">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 12px;">In progress... come back later! The plan for now is to create a web application with a firebase backend and a front end featuring a speech to text and visa versa converter alongside a text summarizer machine learning moodel.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>Autonomous RC Car</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/AutonomousRCCar')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/AutonomousRCCar/blob/main/Autonomous_RC_Car/Autonomous_RC_Car.ino')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://youtu.be/u6Tx4LFk9bU')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used an <b>Arduino Uno with a L293D Motor Drive Shield Expansion Board</b> to control <b>SG90 9G Servo Motors</b>, alongside a <b>ultrasonic distance sensor (HC-SR04)</b> to guide a RC car automatically stopping at obstacles and turning.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>Basketball Mini Hoop Shot Tracker</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/BasketballMiniHoop')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/BasketballMiniHoop/blob/main/Code/hoopproject.ino')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://www.youtube.com/watch?v=VsOM16-T-PU')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used an <b>Arduino Uno with a HC-SR04 (Ultrasonic distance sensor) and the MPU-6050 (accelerometer and gyro)</b> to track a basketball shot, and whether it's a make or miss which would then be displayed on a <b>LCD screen</b>.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>Hand Gesture Controlled RC Car</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/HandGestureControlRCCar')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/HandGestureControlRCCar')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://youtu.be/Z1HGJux7lb4')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used an <b>Arduino Nano's with a L298n (Dual Motor Driver) and the NRF24L01 (radio Communicator)</b> to have a link between the hand control and RC car.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>PC LED Lights</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/PCLEDLights')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/PCLEDLights/blob/main/Code/PC_LED_Code.ino')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://youtu.be/3-z3Ae0HXrE')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used an <b>Arduino Uno with potentiometer's, switch's, and transistors</b> to control LED light strips within the PC, displaying both static and dynamic color ranges.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>Inventory Management System</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/Catalist')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/Catalist/blob/main/src/main/java/Catalist.java')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://youtu.be/B_cZSHXD4D0')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used <b>Java with the Netbeans IDE</b> to create a terminal based inventory management system allowing small businesses to add, remove, and track inventory along with creating invoices, 3rd place at Calgary Youth Hackathon 2021.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>Physics Solver</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/PhysicsSolver')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/PhysicsSolver/blob/main/src/main/java/CS20_FinalProject.java')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used <b>Java with the Netbeans IDE</b> to create a terminal based physics problem solver from a workbook assigned through the Alberta phyics curriculum, it can handle any equation and is sorted by unit.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>Home Renovation Calculator</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/HomeRenoCalculator')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/HomeRenoCalculator/blob/main/HomeRenoCalculator.java')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used <b>Java with the Netbeans IDE</b> to create a terminal based home renovation calculator, using math to calculate the cost of different home imporvement projects such as adding wallpaper.</p>
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <h5>Simple Calculator</h5>
+                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/SimpleCalculator')">
+                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/SimpleCalculator/blob/main/SimpleCalculator.java')">
+                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used <b>Java with the Netbeans IDE</b> to create a terminal based simple calculator that can perform simple arithmetic like addition, subtraction, multiplication, and division.</p>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="resume">
+    <h2 class="section-heading resume-title">Resume</h2>
+    <h4 class="about-me-text">Select the role you are looking for. I have removed my direct contact information from these resumes, if you are a recruiter looking to get in touch please go below in order to send me a message.</h4>
+    <div class="row" id="gallery" style="margin-left: 20px; margin-right: 20px;">
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Data Science / Machine Learning</p>
+        <card class="MLreusme w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" onclick="window.open('resume/MLResume.pdf')"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Web</p>
+        <card class="WEBreusme w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" onclick="window.open('resume/WEBResume.pdf')"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Firmware</p>
+        <card class="FIRMWAREreusme w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" onclick="window.open('resume/FIRMWAREResume.pdf')"></card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
+        <p style="color: white;">Java</p>
+        <card class="JAVAreusme w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" onclick="window.open('resume/JAVAResume.pdf')"></card>
+      </div>
+  </section>
+
+
+  <section id="contact-me">
+
+    <h2 class="section-heading contact-me-title">Contact Me</h2>
+    <h4 class="about-me-text">Please include your name, email (or preferred form of contact), and message so I can effectively reach back to you as soon as possible. You can also click the button on the right to get my LinkedIn.</h4>
+    <div style="width: 70%; float:left;">
+      <div class="form-blocks">
+        <form style="width: 100%" action="https://formspree.io/f/xayvpqyz" method="POST">
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+            <input id="name" name="name" type="text" class="form-control" placeholder="Name"/>
+          </div>
+
+          <!-- Company input -->
+          <div class="form-outline mb-4">
+            <input id="company" type="text" class="form-control"  placeholder="Company Name (If Applicable)"/>
+          </div>
+        
+          <!-- Email input -->
+          <div class="form-outline mb-4" style="width: 100%">
+            <input id="email" name="email" type="email" class="form-control"  placeholder="Email address"/>
+          </div>
+        
+          <!-- Message input -->
+          <div class="form-outline mb-4">
+            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Message"></textarea>
+          </div>
+        
+          <!-- Submit button -->
+          <div style="text-align: center;">
+            <button class="btn btn-secondary" style="width: 40%; display: inline-block; margin-right:5px;">Send</button>
+          </div>
+          <div style="text-align: center;">
+          </div>
+          <div>
+            <p id="error" style="margin-top: 20px; color: red;"></p>
+          </div>
+
+        </form>
+        <div style="margin-bottom: 300px;"></div>
+      </div>
+    </div>
+    <div style="text-align: left;">
+      <div>
+        <img style="width: 120px; margin-top: 150px;" src="./images/linkedin.jpg" onclick="window.open('https://www.linkedin.com/in/hp30/')">
+      </div>
+    </div>
+    
+
+  </section>
+</body>
+
+</html>
+
+<script>
+
+  // function slackbot(){
+  //   var mail = document.createElement("TEST");
+  //   mail.href = "mailto:harshnpateledu@gmail.com";
+  //   mail.click();
+  //   var error = document.getElementById('error');
+  //   if(document.getElementById("name").value != "" || document.getElementById("email").value != "" || document.getElementById("message").value != "" || document.getElementById("company").value != ""){
+  //     error.innerHTML = "";
+  //     return fetch("https://formspree.io/f/xayvpqyz", {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         type: "mrkdwn",
+  //         text: 
+  //         Date() + "\n" +
+  //         "--------------------------------------------" + "\n" +
+  //         "Name: " + document.getElementById("name").value + "\n" +
+  //         "Company: " + document.getElementById("company").value + "\n" +
+  //         "Email: " + document.getElementById("email").value + "\n" +
+  //         "Message: " + document.getElementById("message").value + "\n" +
+  //         "--------------------------------------------"
+  //       }),
+  //     });
+  //   } else{
+  //     var error = document.getElementById('error');
+  //     error.innerHTML = "ERROR: Form fields are empty, cannot send."
+  //   }
+    
+  // }
+
+  function reset(){
+    var name = document.getElementById('name');
+    var company = document.getElementById('company');
+    var email = document.getElementById('email');
+    var message = document.getElementById('message');
+    name.innerHTML = "";
+    company.innerHTML = "";
+    email.innerHTML = "";
+    message.innerHTML = "";
+  }
+
+  function copy(){
+    /* Get the text field */
+    var copyText = "h329pate@uwaterloo.ca";
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText);
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied Email Address";
+  }
+
+  function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+  }
+</script>

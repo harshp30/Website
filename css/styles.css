@@ -1,0 +1,520 @@
+
+/* GENERAL */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #000000;
+  padding-top: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+#title {
+  background-color: #000000;
+  color: white;
+  text-align: left;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+}
+
+/* NAVBAR */
+
+.navbar{
+  background-color: #000000;
+  padding: 0 0 1.5rem;
+}
+
+.navbar-nav{
+  padding-right: 50px;
+  padding-top: 20px;
+  border-top: 0;
+}
+
+.navbar-brand {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 80px;
+  margin-top: 60px;
+}
+
+.nav-item {
+  padding: 0 10px;
+  font-size: 25px;
+}
+
+.logo{
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 80px;
+}
+
+/* HEADINGS */
+.intro-sentence {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 2.3rem;
+  line-height: 1.5;
+  padding-top: 80px;
+}
+
+.about-me-title{
+  color: white;
+  margin-top: 225px;
+  padding-top: 160px;
+}
+
+.contact-me-title,
+.resume-title,
+.portfolio-title{
+  color: white;
+  padding-top: 160px;
+}
+
+.section-heading{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.gall-type{
+  font-size: 2.5rem;
+}
+
+.gall-type-rangoli{
+  font-size: 2.5rem;
+  margin-top: 50px;
+}
+
+/* MAIN PAGE */
+
+.container-fluid {
+  padding: 1% 15% 0% 15%;
+}
+
+/* Name */
+
+.name{
+  padding-top: 150px;
+  margin-bottom: 20%;
+  font-size: 5rem;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+/* Arrow Down */
+
+.text-arrow {
+  font-size: 3rem;
+  width: 100%;
+  position: relative;
+  width: max-content;
+  text-align: center;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ABOUT ME PAGE */
+
+.about-me-text{
+  width: 70%;
+  color: #808080;
+  align-self: center;
+  display: inline-block;
+}
+
+.about-me-blocks{
+  text-align: center;
+  color: #808080;
+}
+
+.waterloo-logo{
+  width: 15%
+}
+
+.waterloo-logo-text{
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+}
+
+
+/* PORTFOLIO */
+
+.AutonomousRC{
+  background-image: url(../images/autonomous.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5
+}
+
+.AutonomousRC:hover{
+  opacity: 1;
+  background-image: url(../images/autonomous.jpg);
+}
+
+.BasketballMini{
+  background-image: url(../images/basketball.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5
+}
+
+.BasketballMini:hover{
+  opacity: 1;
+  background-image: url(../images/basketball.jpg);
+}
+
+.HandGestured{
+  background-image: url(../images/handcontrolled.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5
+}
+
+.HandGestured:hover{
+  opacity: 1;
+  background-image: url(../images/handcontrolled.jpg);
+}
+
+.PCLed{
+  background-image: url(../images/PC.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5
+}
+
+.PCLed:hover{
+  opacity: 1;
+  background-image: url(../images/PC.jpg);
+}
+
+.HeartClassification{
+  background-image: url(../images/heartdisease.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5
+}
+
+.HeartClassification:hover{
+  opacity: 1;
+  background-image: url(../images/heartdisease.jpg);
+}
+
+.CaliforniaHousing{
+  background-image: url(../images/californiahousing.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5
+}
+
+.CaliforniaHousing:hover{
+  opacity: 1;
+  background-image: url(../images/californiahousing.jpg);
+}
+
+.DogBreed{
+  background-image: url(../images/dogbreed.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5
+}
+
+.DogBreed:hover{
+  opacity: 1;
+  background-image: url(../images/dogbreed.jpg);
+}
+
+.LectureAssist{
+  background-image: url(../images/lectureassist.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5
+}
+
+.LectureAssist:hover{
+  opacity: 1;
+  background-image: url(../images/lectureassist.jpg);
+}
+
+/* RESUME PAGE */
+.MLreusme{
+  background-image: url(../images/mlresume.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5
+}
+
+.MLreusme:hover{
+  opacity: 1;
+  background-image: url(../images/mlresume.jpg);
+}
+
+.WEBreusme{
+  background: url(../images/webresume.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.WEBreusme:hover{
+  opacity: 1;
+  background: url(../images/webresume.jpg);
+}
+
+.FIRMWAREreusme{
+  background: url(../images/firmwareresume.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.FIRMWAREreusme:hover{
+  opacity: 1;
+  background: url(../images/firmwareresume.jpg);
+}
+
+.JAVAreusme{
+  background: url(../images/javaresume.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.JAVAreusme:hover{
+  opacity: 1;
+  background: url(../images/javaresume.jpg);
+}
+
+.PhysicsSolver{
+  background: url(../images/physicssolver.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.PhysicsSolver:hover{
+  opacity: 1;
+  background: url(../images/physicssolver.jpg);
+}
+
+.HomeCalc{
+  background: url(../images/homecalc.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.HomeCalc:hover{
+  opacity: 1;
+  background: url(../images/homecalc.jpg);
+}
+
+.SimpleCalc{
+  background: url(../images/simplecalc.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.SimpleCalc:hover{
+  opacity: 1;
+  background: url(../images/simplecalc.jpg);
+}
+
+.InventorySystem{
+  background: url(../images/inventory.jpg);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.InventorySystem:hover{
+  opacity: 1;
+  background: url(../images/inventory.jpg);
+}
+
+
+/* CONTACT ME PAGE */
+
+.form-blocks{
+  width: 45%;
+  display: inline-block;
+}
+
+form{
+  width: 50%;
+  margin-top: 30px;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+ }
+ 
+ .carousel-control-next-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+ }
+
+ .carousel .carousel-indicators li {background-color: grey;}
+ .carousel .carousel-indicators li.active {background-color: black;}
+
+
+
