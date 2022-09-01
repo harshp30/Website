@@ -362,8 +362,14 @@ form {
     justify-content: center;
 }
 
+.form-control{
+  transition: backdrop-filter 1s;
+  backdrop-filter: blur(0px);
+}
+
 .form-control:hover {
-    backdrop-filter: blur(5px);
+   transition: backdrop-filter 1s;
+  backdrop-filter: blur(5px);
 }
 
 .form-outline{
