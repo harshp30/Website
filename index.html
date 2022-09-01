@@ -2,353 +2,707 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Harsh Patel</title>
-  <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg"/>
+    <meta charset="utf-8" />
+    <title>Harsh Patel</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg" />
 
-  <!-- CSS Style Sheet -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Google Fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;900&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome-->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-  <!-- Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=1.9.1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
+
+    <script type="text/javascript" src="resources/scripts/bg-animation.js"></script>
+
 
 </head>
 
 <body>
+    <!-- wrapper -->
+    <div class="wrapper" style="z-index: 0;">
+        <canvas id="bg-animation"></canvas>
 
-  <section id="title">
+        <!--Navbar/Title-->
+        <section id="title">
 
-    <div class="container-fluid">
+            <div class="container-fluid">
 
-      <!-- Nav Bar -->
-      <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+                <!-- Nav Bar -->
+                <nav class="navbar fixed-top navbar-expand-md navbar-dark">
 
-        <a href="#title"><img class="logo" alt="LOGO" src="images/logo.jpg"></a>
+                    <a href="#title"><img class="logo" alt="LOGO" src="images/logo.jpg"></a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about-me">ABOUT ME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">PORTFOLIO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact-me">CONTACT ME</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- <h1 class="name">HARSH PATEL</h1> -->
-      <h3 class="name">Harsh Patel</h3>
-      <!-- <p class="subtitle">Welcome to my website!</p> -->
-        <div style="text-align: center;">
-          <a class="text-arrow">Scroll down to see more about me and my experiences.</a>
-        </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
 
-        <div class="arrow bounce">
-          <a class="fa fa-arrow-down fa-2x"></a>
-        </div>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#skills">SKILLS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact-me">CONTACT ME</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-  </section>
-
-  
-
-  <section id="about-me">
-
-    <h2 class="section-heading about-me-title">About Me</h2>
-    <h4 class="about-me-text">A little bit about me and my career so far.</h4>
-    <div>
-      <div class="about-me-blocks" style="margin-top: 20px; font-size: 2rem;">
-        <p>I am currently a Computer Engineering student and the University of Waterloo.</p>
-        <p>Currently I am seeking a Fall 2022 Internship.</p>
-      </div>
-      <div class="about-me-blocks" style="margin-left: 20px; margin-top: 50px;">
-        <!-- <p class="waterloo-logo-text">Candidate for B.A.S.c in Computer Engineering</p> -->
-        <img class="waterloo-logo" src="images/University_of_Waterloo_seal.svg.png" onclick="window.open('https://uwaterloo.ca/future-students/programs/computer-engineering')">
-        <!-- <img class="waterloo-logo" src="images/friendlier-circle.png" onclick="window.open('https://www.friendlier.ca/')"> -->
-      </div>
-      <!-- <div class="about-me-blocks" style="margin-top: 20px; font-size: 2rem;">
-        <p>Outside of work, I spend my time playing sports like basketball and volleyball.</p>
-      </div> -->
-    </div>
-
-  </section>
-
-
-
-  <section id="portfolio">
-    <h2 class="section-heading portfolio-title">Portfolio</h2>
-    <h4 class="about-me-text">Explore some of the projects I have worked on throughout the past few years, and some that are currently in progress.</h4>
-    <div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal" style="margin-left: 20px; margin-right: 20px;">
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Heart Disease Classification</p>
-        <card class="HeartClassification w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="0"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">California Housing Regression</p>
-        <card class="CaliforniaHousing w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="1"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Dog Breed Image Convolution</p>
-        <card class="DogBreed w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="2"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Lecture Assist</p>
-        <card class="LectureAssist w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="3"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Autonomous RC Car</p>
-        <card class="AutonomousRC w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="4"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Basketball Mini Hoop Shot Tracker</p>
-        <card class="BasketballMini w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="5"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Hand Gesture Controlled RC Car</p>
-        <card class="HandGestured w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="6"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">PC LED Lights</p>
-        <card class="PCLed w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="7"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Inventory Management System</p>
-        <card class="InventorySystem w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="8"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Physics Solver</p>
-        <card class="PhysicsSolver w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="9"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Home Renovation Calculator</p>
-        <card class="HomeCalc w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="10"></card>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3" style="margin-top: 25px;">
-        <p style="color: white;">Simple Calculator</p>
-        <card class="SimpleCalc w-100 btn btn-secondary" style="width: 316px; height:400px; margin-top: 20px; padding-top: 55%;" alt="First slide" data-target="#carouselExample" data-slide-to="11"></card>
-      </div>
-    </div>
-    
-    <!-- Modal -->
-    <!-- 
-    This part is straight out of Bootstrap docs. Just a carousel inside a modal.
-    -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: black">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div id="carouselExample" class="carousel slide">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExample" data-slide-to="1"></li>
-                <li data-target="#carouselExample" data-slide-to="2"></li>
-                <li data-target="#carouselExample" data-slide-to="3"></li>
-                <li data-target="#carouselExample" data-slide-to="4"></li>
-                <li data-target="#carouselExample" data-slide-to="5"></li>
-                <li data-target="#carouselExample" data-slide-to="6"></li>
-                <li data-target="#carouselExample" data-slide-to="7"></li>
-                <li data-target="#carouselExample" data-slide-to="8"></li>
-                <li data-target="#carouselExample" data-slide-to="9"></li>
-                <li data-target="#carouselExample" data-slide-to="10"></li>
-                <li data-target="#carouselExample" data-slide-to="11"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active" style="margin-bottom: 50px;">
-                  <h5>Heart Disease Classification</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification/blob/main/heart-disease.ipynb')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">A combination of <b>Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas, NumPy, Seaborn</b> and a Kaggle provided dataset allowed me to create a classification model that helps predict whether a patient has heart disease given certain clinical parameters.</p>
+                <h3 class="name noselect">Harsh Patel</h3>
+                <div class="about-me noselect">
+                    <h3 class="about-me-text" style="color: white; font-weight: 200;">Computer Engineering student at the <span class="about-me-key" onclick="window.open('https://uwaterloo.ca/future-students/programs/computer-engineering')">University of
+                        Waterloo</span></h3>
+                    <h3 class="about-me-text" style="color: white; font-weight: 200;">Machine Learning Engineer Intern at <span class="about-me-key" onclick="window.open('https://www.perkinelmer.com/')">PerkinElmer</span></h3>
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>California Housing Regression</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/CaliforniaHousingRegression')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/CaliforniaHousingRegression/blob/main/california-housing-regression.ipynb')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">A combination of <b>Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas, NumPy, Seaborn</b> and a Kaggle provided dataset allowed me to create a regression model that helps predict the price of a home in California based on it's location and some other factors.</p>
+
+                <div style="text-align: center;">
+                    <a class="text-arrow noselect" style="color: white">"In the midst of chaos, there is also
+                        opportunity." - Sun
+                        Tzu</a>
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>Dog Breed Image Convolution</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification/blob/main/heart-disease.ipynb')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">A combination of <b>Google Colab, Tensorflow, MatplotLib, Pandas, NumPy</b> and a Kaggle provided dataset allowed me to create a predictive model that helps predict whether the breed of a dog from just the image.</p>
+
+
+                <div class="arrow bounce">
+                    <a class="fa fa-arrow-down fa-2x"></a>
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5 style="margin-bottom: 12px;">Lecture Assist</h5>
-                  <img style="width: 12%;" src="./images/clock.png">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 12px;">In progress... come back later! The plan for now is to create a web application with a firebase backend and a front end featuring a speech to text and visa versa converter alongside a text summarizer machine learning moodel.</p>
+
+        </section>
+        <!-- END Navbar/Title-->
+
+        <!--Skills-->
+        <section id="skills" class="noselect">
+            <h2 class="section-heading portfolio-title">Skills</h2>
+            <h4 class="portfolio-text">Explore some of the skills I have learned and applied in my work.</h4>
+            <div class="glass-container" style="margin-top: 100px">
+                <div class="skill-img">
+                    <h3>Tensorflow</h3>
+                    <!-- <img src="./images/scikit.png"> -->
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>Autonomous RC Car</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/AutonomousRCCar')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/AutonomousRCCar/blob/main/Autonomous_RC_Car/Autonomous_RC_Car.ino')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://youtu.be/u6Tx4LFk9bU')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used an <b>Arduino Uno with a L293D Motor Drive Shield Expansion Board</b> to control <b>SG90 9G Servo Motors</b>, alongside a <b>ultrasonic distance sensor (HC-SR04)</b> to guide a RC car automatically stopping at obstacles and turning.</p>
+                <div class="skill-img">
+                    <h3>PyTorch</h3>
+                    <!-- <img src="./images/scikit.png"> -->
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>Basketball Mini Hoop Shot Tracker</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/BasketballMiniHoop')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/BasketballMiniHoop/blob/main/Code/hoopproject.ino')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://www.youtube.com/watch?v=VsOM16-T-PU')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used an <b>Arduino Uno with a HC-SR04 (Ultrasonic distance sensor) and the MPU-6050 (accelerometer and gyro)</b> to track a basketball shot, and whether it's a make or miss which would then be displayed on a <b>LCD screen</b>.</p>
+                <div class="skill-img">
+                    <h3>Scikit-Learn</h3>
+                    <!-- <img src="./images/scikit.png"> -->
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>Hand Gesture Controlled RC Car</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/HandGestureControlRCCar')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/HandGestureControlRCCar/tree/main/code')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://youtu.be/Z1HGJux7lb4')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used an <b>Arduino Nano's with a L298n (Dual Motor Driver) and the NRF24L01 (radio Communicator)</b> to have a link between the hand control and RC car.</p>
+                <div class="skill-img">
+                    <h3>Pandas</h3>
+                    <!-- <img src="./images/scikit.png"> -->
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>PC LED Lights</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/PCLEDLights')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/PCLEDLights/blob/main/Code/PC_LED_Code.ino')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://youtu.be/3-z3Ae0HXrE')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used an <b>Arduino Uno with potentiometer's, switch's, and transistors</b> to control LED light strips within the PC, displaying both static and dynamic color ranges.</p>
+                <div class="skill-img">
+                    <h3>Matplotlib</h3>
+                    <!-- <img src="./images/scikit.png"> -->
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>Inventory Management System</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/Catalist')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/Catalist/blob/main/src/main/java/Catalist.java')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/youtube.png" onclick="window.open('https://youtu.be/B_cZSHXD4D0')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used <b>Java with the Netbeans IDE</b> to create a terminal based inventory management system allowing small businesses to add, remove, and track inventory along with creating invoices, 3rd place at Calgary Youth Hackathon 2021.</p>
+                <div class="skill-img">
+                    <h3>NumPy</h3>
+                    <!-- <img src="./images/scikit.png"> -->
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>Physics Solver</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/PhysicsSolver')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/PhysicsSolver/blob/main/src/main/java/CS20_FinalProject.java')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used <b>Java with the Netbeans IDE</b> to create a terminal based physics problem solver from a workbook assigned through the Alberta phyics curriculum, it can handle any equation and is sorted by unit.</p>
+                <div class="skill-img">
+                    <h3>Jupyter Notebook</h3>
+                    <!-- <img src="./images/scikit.png"> -->
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>Home Renovation Calculator</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/HomeRenoCalculator')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/HomeRenoCalculator/blob/main/HomeRenoCalculator.java')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used <b>Java with the Netbeans IDE</b> to create a terminal based home renovation calculator, using math to calculate the cost of different home imporvement projects such as adding wallpaper.</p>
+                <div class="skill-img">
+                    <h3>AWS Sagemaker</h3>
+                    <!-- <img src="./images/scikit.png"> -->
                 </div>
-                <div class="carousel-item" style="margin-bottom: 50px;">
-                  <h5>Simple Calculator</h5>
-                  <img style="width: 10%; margin-top: 20px;" src="./images/github.jpg" onclick="window.open('https://github.com/harshp30/SimpleCalculator')">
-                  <img style="width: 10%; margin-left: 30px; margin-top: 20px;" src="./images/code.png" onclick="window.open('https://github.com/harshp30/SimpleCalculator/blob/main/SimpleCalculator.java')">
-                  <p style="width: 80%; margin-left: 10%; margin-top: 20px;">Used <b>Java with the Netbeans IDE</b> to create a terminal based simple calculator that can perform simple arithmetic like addition, subtraction, multiplication, and division.</p>
+                <div class="skill-img">
+                    <h3>Google Colab</h3>
+                    <!-- <img src="./images/scikit.png"> -->
                 </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+                <div class="skill-img">
+                    <h3>Documentation</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>Git</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>Python</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>HTML</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>CSS</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>JavaScript</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>React.js</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>Vue.js</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>C++</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>Java</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
+                <div class="skill-img">
+                    <h3>UNIX commands</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
+
+
+        </section>
+        <!--END Skills-->
+
+        <!--Porfolio-->
+        <section id="portfolio" class="noselect">
+            <h2 class="section-heading portfolio-title">Portfolio</h2>
+            <h4 class="portfolio-text">Hover through some of the projects I have worked on.</h4>
+            <div class="glass-container">
+                <div class="glass-card">
+                    <div class="glass-content-pre">
+                        <h2 class="glass-num">01</h2>
+                    </div>
+                    <div class="glass-content-post">
+                        <h3 class="glass-title">Heart Disease Classification</h3>
+                        <p class="glass-info">A combination of Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas,
+                            NumPy, Seaborn and a Kaggle provided dataset allowed me to create a classification model
+                            that helps predict whether a patient has heart disease given certain clinical parameters.
+                        </p>
+                        <div>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification')"
+                                src="./images/github.jpg" ></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-pre">
+                        <h2 class="glass-num">02</h2>
+                    </div>
+                    <div class="glass-content-post">
+                        <h3 class="glass-title">California Housing Regression</h3>
+                        <p class="glass-info">A combination of Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas,
+                            NumPy, Seaborn and a Kaggle provided dataset allowed me to create a regression model that
+                            helps predict the price of a home in California based on it's location and some other
+                            factors.</p>
+                        <div>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://github.com/harshp30/CaliforniaHousingRegression')"
+                                    src="./images/github.jpg"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-pre">
+                        <h2 class="glass-num">03</h2>
+                    </div>
+                    <div class="glass-content-post">
+                        <h3 class="glass-title">Dog Breed Image Convolution</h3>
+                        <p class="glass-info">A combination of Google Colab, Tensorflow, MatplotLib, Pandas, NumPy and a
+                            Kaggle provided dataset allowed me to create a predictive model that helps predict whether
+                            the breed of a dog from just the image.</p>
+                        <div>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://github.com/harshp30/DogBreedIdentification')"
+                                    src="./images/github.jpg"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-pre">
+                        <h2 class="glass-num">04</h2>
+                    </div>
+                    <div class="glass-content-post">
+                        <h3 class="glass-title">Autonomous RC Car</h3>
+                        <p class="glass-info">Used an Arduino Uno with a L293D Motor Drive Shield Expansion Board to
+                            control SG90 9G Servo Motors, alongside a ultrasonic distance sensor (HC-SR04) to guide a RC
+                            car automatically stopping at obstacles and turning.</p>
+                        <div>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://github.com/harshp30/AutonomousRCCar')"
+                                    src="./images/github.jpg"></a>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://youtu.be/u6Tx4LFk9bU')"
+                                    src="./images/youtube.png"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-pre">
+                        <h2 class="glass-num">05</h2>
+                    </div>
+                    <div class="glass-content-post">
+                        <h3 class="glass-title">Basketball Mini Hoop Shot Tracker</h3>
+                        <p class="glass-info">Used an Arduino Uno with a HC-SR04 (Ultrasonic distance sensor) and the
+                            MPU-6050 (accelerometer and gyro) to track a basketball shot, and whether it's a make or
+                            miss which would then be displayed on a LCD screen.</p>
+                        <div>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://github.com/harshp30/BasketballMiniHoop')"
+                                    src="./images/github.jpg"></a>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://www.youtube.com/watch?v=VsOM16-T-PU')"
+                                    src="./images/youtube.png"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-pre">
+                        <h2 class="glass-num">06</h2>
+                    </div>
+                    <div class="glass-content-post">
+                        <h3 class="glass-title">Hand Gesture Controlled RC Car</h3>
+                        <p class="glass-info">Used an Arduino Nano's with a L298n (Dual Motor Driver) and the NRF24L01
+                            (radio Communicator) to have a link between the hand control and RC car.</p>
+                        <div>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://github.com/harshp30/HandGestureControlRCCar')"
+                                    src="./images/github.jpg"></a>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://youtu.be/Z1HGJux7lb4')"
+                                    src="./images/youtube.png"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-pre">
+                        <h2 class="glass-num">07</h2>
+                    </div>
+                    <div class="glass-content-post">
+                        <h3 class="glass-title">PC LED Lights</h3>
+                        <p class="glass-info">Used an Arduino Uno with potentiometer's, switch's, and transistors to
+                            control LED light strips within the PC, displaying both static and dynamic color ranges.</p>
+                        <div>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://github.com/harshp30/PCLEDLights')"
+                                    src="./images/github.jpg"></a>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://youtu.be/3-z3Ae0HXrE')"
+                                    src="./images/youtube.png"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-pre">
+                        <h2 class="glass-num">08</h2>
+                    </div>
+                    <div class="glass-content-post">
+                        <h3 class="glass-title">Inventory Management System</h3>
+                        <p class="glass-info">Used Java with the Netbeans IDE to create a terminal based inventory
+                            management system allowing small businesses to add, remove, and track inventory along with
+                            creating invoices.</p>
+                        <div>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://github.com/harshp30/Catalist')"
+                                    src="./images/github.jpg"></a>
+                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
+                                onclick="window.open('https://youtu.be/B_cZSHXD4D0')"
+                                    src="./images/youtube.png"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--END Portfolio-->
+
+        <!--Contact Me-->
+        <section id="contact-me" class="noselect">
+            <h2 class="section-heading portfolio-title">Contact Me</h2>
+            <h4 class="portfolio-text">Interested in haveing a conversation? Feel free to reach out below.</h4>
+            <div style="width: 70%; float:left;">
+                <div class="form-blocks">
+                    <form style="width: 100%;" action="https://formspree.io/f/xayvpqyz" method="POST">
+                        <!-- Name input -->
+                        <div class="form-outline mb-4" style="width: 100%">
+                            <div class="label">
+                                <label style="font-size: 20px;">Name</label>
+                            </div>
+                            <div>
+                                <input id="name" name="name" type="text" class="form-control noselect"
+                                style="background: rgba(255, 255, 255, 0.1); color: white; width: 100%;" />
+                            </div>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4" style="width: 100%">
+                            <div class="label">
+                                <label style="font-size: 20px;">Email</label>
+                            </div>
+                            <div>
+                                <input id="email" name="email" type="email" class="form-control"
+                                style="background: rgba(255, 255, 255, 0.1); color: white;" />
+                            </div>
+                        </div>
+
+                        <!-- Message input -->
+                        <div class="form-outline mb-4" style="width: 100%">
+                            <div class="label">
+                                <label style="font-size: 20px;">Message</label>
+                            </div>
+                            <div>
+                                <textarea id="message" name="message" class="form-control" rows="6"
+                                style="background: rgba(255, 255, 255, 0.1); color: white;"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <div style="text-align: center;">
+                            <button class="btn btn-secondary send"
+                                style="width: 40%; display: inline-block; margin-right:5px;"
+                                style="background: rgba(255, 255, 255, 0.1); color: white;">Send</button>
+                        </div>
+                        <div style="text-align: center;">
+                        </div>
+                        <div>
+                            <p id="error" style="margin-top: 20px; color: red;"></p>
+                        </div>
+
+                    </form>
+                    <div style="margin-bottom: 300px;"></div>
+                </div>
+            </div>
+            <div style="text-align: left;">
+                <div>
+                    <img class="linkedin" style="width: 120px; margin-top: 200px;" src="./images/linkedin.jpg"
+                        onclick="window.open('https://www.linkedin.com/in/hp30/')">
+                </div>
+            </div>
+
+        </section>
+        <!--END Contact Me-->
+
     </div>
-  </section>
 
 
-  <section id="contact-me">
 
-    <h2 class="section-heading contact-me-title">Contact Me</h2>
-    <h4 class="about-me-text">I will get back to you as soon as possible. You can also click the button on the right to navigate to my LinkedIn.</h4>
-    <div style="width: 70%; float:left;">
-      <div class="form-blocks">
-        <form style="width: 100%" action="https://formspree.io/f/xayvpqyz" method="POST">
-          <!-- Name input -->
-          <div class="form-outline mb-4">
-            <input id="name" name="name" type="text" class="form-control" placeholder="Name"/>
-          </div>
+    <!-- /wrapper -->
 
-          <!-- Company input -->
-          <div class="form-outline mb-4">
-            <input id="company" type="text" class="form-control"  placeholder="Company Name (If Applicable)"/>
-          </div>
-        
-          <!-- Email input -->
-          <div class="form-outline mb-4" style="width: 100%">
-            <input id="email" name="email" type="email" class="form-control"  placeholder="Email address"/>
-          </div>
-        
-          <!-- Message input -->
-          <div class="form-outline mb-4">
-            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Message"></textarea>
-          </div>
-        
-          <!-- Submit button -->
-          <div style="text-align: center;">
-            <button class="btn btn-secondary" style="width: 40%; display: inline-block; margin-right:5px;">Send</button>
-          </div>
-          <div style="text-align: center;">
-          </div>
-          <div>
-            <p id="error" style="margin-top: 20px; color: red;"></p>
-          </div>
 
-        </form>
-        <div style="margin-bottom: 300px;"></div>
-      </div>
-    </div>
-    <div style="text-align: left;">
-      <div>
-        <img style="width: 120px; margin-top: 150px;" src="./images/linkedin.jpg" onclick="window.open('https://www.linkedin.com/in/hp30/')">
-      </div>
-    </div>
-    
 
-  </section>
+
+
 </body>
 
-</html>
-
 <script>
+    (function () {
+        var width,
+            height,
+            canvas,
+            ctx,
+            points,
+            target,
+            animateHeader = true;
+        var colorRGB = 255;
 
-  function reset(){
-    var name = document.getElementById('name');
-    var company = document.getElementById('company');
-    var email = document.getElementById('email');
-    var message = document.getElementById('message');
-    name.innerHTML = "";
-    company.innerHTML = "";
-    email.innerHTML = "";
-    message.innerHTML = "";
-  }
+        // Main
+        initHeader();
+        initAnimation();
+        addListeners();
 
-  function copy(){
-    /* Get the text field */
-    var copyText = "h329pate@uwaterloo.ca";
+        function initHeader() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            target = {
+                x: width / 2,
+                y: height / 2
+            };
 
-    /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText);
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copied Email Address";
-  }
+            canvas = document.getElementById("bg-animation");
+            canvas.width = width;
+            canvas.height = height;
+            ctx = canvas.getContext("2d");
 
-  function outFunc() {
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copy to clipboard";
-  }
+            // create points
+            points = [];
+            for (var x = 0; x < width; x = x + width / 20) {
+                for (var y = 0; y < height; y = y + height / 20) {
+                    var px = x + (Math.random() * width) / 20;
+                    var py = y + (Math.random() * height) / 20;
+                    var p = {
+                        x: px,
+                        originX: px,
+                        y: py,
+                        originY: py
+                    };
+                    points.push(p);
+                }
+            }
+
+            // for each point find the 5 closest points
+            for (var i = 0; i < points.length; i++) {
+                var closest = [];
+                var p1 = points[i];
+                for (var j = 0; j < points.length; j++) {
+                    var p2 = points[j];
+                    if (!(p1 == p2)) {
+                        var placed = false;
+                        for (var k = 0; k < 5; k++) {
+                            if (!placed) {
+                                if (closest[k] == undefined) {
+                                    closest[k] = p2;
+                                    placed = true;
+                                }
+                            }
+                        }
+
+                        for (var k = 0; k < 5; k++) {
+                            if (!placed) {
+                                if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+                                    closest[k] = p2;
+                                    placed = true;
+                                }
+                            }
+                        }
+                    }
+                }
+                p1.closest = closest;
+            }
+
+            // assign a circle to each point
+            for (var i in points) {
+                var c = new Circle(
+                    points[i],
+                    2 + Math.random() * 2,
+                    "rgba(255,255,255,0.3)"
+                );
+                points[i].circle = c;
+            }
+        }
+
+        // Event handling
+        function addListeners() {
+            if (!("ontouchstart" in window)) {
+                window.addEventListener("mousemove", mouseMove);
+            }
+            window.addEventListener("scroll", resize);
+            window.addEventListener("resize", resize);
+        }
+
+        function mouseMove(e) {
+            var posx = (posy = 0);
+            if (e.pageX || e.pageY) {
+                posx = e.pageX;
+                posy = e.pageY - $(window).scrollTop();
+                absolutePosy = e.pageY;
+            } else if (e.clientX || e.clientY) {
+                posx =
+                    e.clientX +
+                    document.body.scrollLeft +
+                    document.documentElement.scrollLeft;
+                posy =
+                    e.clientY +
+                    document.body.scrollTop +
+                    document.documentElement.scrollTop;
+            }
+
+            target.x = posx;
+            target.y = posy;
+
+            if ($("body").hasClass("single-iaa_programs")) {
+                if (absolutePosy > 800) {
+                    colorRGB = 128;
+                } else {
+                    colorRGB = 255;
+                }
+            } else if ($("body").hasClass("page-template-default")) {
+                if (absolutePosy > 600) {
+                    colorRGB = 128;
+                } else {
+                    colorRGB = 255;
+                }
+            }
+        }
+
+        function scrollCheck() {}
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            ctx.canvas.width = width;
+            ctx.canvas.height = height;
+        }
+
+        // animation
+        function initAnimation() {
+            animate();
+            for (var i in points) {
+                shiftPoint(points[i]);
+            }
+        }
+
+        function animate() {
+            if (animateHeader) {
+                ctx.clearRect(0, 0, width, height);
+                for (var i in points) {
+                    // detect points in range
+                    if (Math.abs(getDistance(target, points[i])) < 4000) {
+                        points[i].active = 0.3;
+                        points[i].circle.active = 0.6;
+                    } else if (Math.abs(getDistance(target, points[i])) < 20000) {
+                        points[i].active = 0.1;
+                        points[i].circle.active = 0.3;
+                    } else if (Math.abs(getDistance(target, points[i])) < 40000) {
+                        points[i].active = 0.02;
+                        points[i].circle.active = 0.1;
+                    } else {
+                        points[i].active = 0;
+                        points[i].circle.active = 0;
+                    }
+
+                    drawLines(points[i]);
+                    points[i].circle.draw();
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        function shiftPoint(p) {
+            TweenLite.to(p, 1 + 1 * Math.random(), {
+                x: p.originX - 50 + Math.random() * 100,
+                y: p.originY - 50 + Math.random() * 100,
+                ease: Circ.easeInOut,
+                onComplete: function () {
+                    shiftPoint(p);
+                },
+            });
+        }
+
+        // Canvas manipulation
+        function drawLines(p) {
+            if (!p.active) return;
+            for (var i in p.closest) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p.closest[i].x, p.closest[i].y);
+                ctx.strokeStyle =
+                    "rgba(" +
+                    colorRGB +
+                    "," +
+                    colorRGB +
+                    "," +
+                    colorRGB +
+                    "," +
+                    p.active +
+                    ")";
+                //            ctx.strokeStyle = 'rgba(156,217,249,'+ p.active+')';
+                ctx.stroke();
+            }
+        }
+
+        function Circle(pos, rad, color) {
+            var _this = this;
+
+            // constructor
+            (function () {
+                _this.pos = pos || null;
+                _this.radius = rad || null;
+                _this.color = color || null;
+            })();
+
+            this.draw = function () {
+                if (!_this.active) return;
+                ctx.beginPath();
+                ctx.arc(
+                    _this.pos.x,
+                    _this.pos.y,
+                    _this.radius,
+                    0,
+                    2 * Math.PI,
+                    false
+                );
+                ctx.fillStyle =
+                    "rgba(" +
+                    colorRGB +
+                    "," +
+                    colorRGB +
+                    "," +
+                    colorRGB +
+                    "," +
+                    _this.active +
+                    ")";
+                ctx.fill();
+            };
+        }
+
+        // Util
+        function getDistance(p1, p2) {
+            return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+        }
+    })();
+
+
+    function reset() {
+        var name = document.getElementById('name');
+        var company = document.getElementById('company');
+        var email = document.getElementById('email');
+        var message = document.getElementById('message');
+        name.innerHTML = "";
+        company.innerHTML = "";
+        email.innerHTML = "";
+        message.innerHTML = "";
+    }
+
+    function copy() {
+        /* Get the text field */
+        var copyText = "h329pate@uwaterloo.ca";
+
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(copyText);
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied Email Address";
+    }
+
+    function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copy to clipboard";
+    }
+
+    function tdnn() {
+        document.getElementsByClassName("moon")[0].classList.toggle("sun");
+        document.getElementsByClassName("tdnn")[0].classList.toggle("day");
+        document.getElementsByTagName("BODY")[0].classList.toggle("light");
+    }
 </script>
+
+</html>
