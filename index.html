@@ -6,6 +6,7 @@
     <title>Harsh Patel</title>
     <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg" />
 
+    <script src="https://kit.fontawesome.com/37263448cf.js" crossorigin="anonymous"></script>
     <!-- CSS Style Sheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -93,6 +94,8 @@
                     <a class="fa fa-arrow-down fa-2x"></a>
                 </div>
 
+
+
         </section>
         <!-- END Navbar/Title-->
 
@@ -101,6 +104,10 @@
             <h2 class="section-heading portfolio-title">Skills</h2>
             <h4 class="portfolio-text">Explore some of the skills I have learned and applied in my work.</h4>
             <div class="glass-container" style="margin-top: 100px">
+                <div class="skill-img">
+                    <h3>OpenCV</h3>
+                    <!-- <img src="./images/scikit.png"> -->
+                </div>
                 <div class="skill-img">
                     <h3>Tensorflow</h3>
                     <!-- <img src="./images/scikit.png"> -->
@@ -135,10 +142,6 @@
                 </div>
                 <div class="skill-img">
                     <h3>Google Colab</h3>
-                    <!-- <img src="./images/scikit.png"> -->
-                </div>
-                <div class="skill-img">
-                    <h3>Documentation</h3>
                     <!-- <img src="./images/scikit.png"> -->
                 </div>
                 <div class="skill-img">
@@ -188,162 +191,134 @@
         <!--END Skills-->
 
         <!--Porfolio-->
-        <section id="portfolio" class="noselect">
+        <section id="portfolio">
             <h2 class="section-heading portfolio-title">Portfolio</h2>
             <h4 class="portfolio-text">Hover through some of the projects I have worked on.</h4>
-            <!--Refernece for glass cards: https://www.youtube.com/watch?v=hv0rNxr1XXk&ab_channel=OnlineTutorials-->
+             <!--Refernece for glass cards: https://www.youtube.com/watch?v=hv0rNxr1XXk&ab_channel=OnlineTutorials-->
             <div class="glass-container">
                 <div class="glass-card">
-                    <div class="glass-content-pre">
-                        <h2 class="glass-num">01</h2>
-                    </div>
-                    <div class="glass-content-post">
-                        <h3 class="glass-title">Heart Disease Classification</h3>
-                        <p class="glass-info">A combination of Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas,
-                            NumPy, Seaborn and a Kaggle provided dataset allowed me to create a classification model
-                            that helps predict whether a patient has heart disease given certain clinical parameters.
+                    <div class="glass-content-post" onmouseover="showText1()" onmouseout="hideText1()">
+                        <h3 class="glass-title">Sign Language Translator</h3>
+                        <p id='glassText1' class="glass-info">A computer visison model based on OpenCV and Tesnorflow's Object detection model that can classify a series of hand sings 
+                            and detect what the corresponding label. This model works on a live video feed and on images, boxing in the detected object.
                         </p>
                         <div>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification')"
-                                src="./images/github.jpg" ></a>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/LiveSignLanguageTranslator')"></i>
+                           </a>
+                           <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=5n3iZMe0rIs&ab_channel=HarshPatel')"></i>
+                           </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText2()" onmouseout="hideText2()">
+                        <h3 class="glass-title">Live Car Object Detection</h3>
+                        <p id='glassText2' class="glass-info">A computer visison model based on OpenCV and Tesnorflow's Object detection model that can classify a series of vehicles.
+                             and detect what the corresponding label. This model works on a live video feed and on images, boxing in the detected object.
+                        </p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/LiveDashcamCarDetection')"></i>
+                           </a>
+                           <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=sTTXLbIhBGE&ab_channel=HarshPatel')"></i>
+                           </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText3()" onmouseout="hideText3()">
+                        <h3 class="glass-title">macOS Motion Controller</h3>
+                        <p id='glassText3' class="glass-info">With a combination of mediapipe and osascript I was able to perform certain function on my MacBook through
+                            body movement. By calculating the angle between nodes on my body I was able to assign play, pause, volume control, and app launch functions.
+                        </p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/MovementBasedMacOSControl')"></i>
+                           </a>
+                           <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=NXm064K_FTc&ab_channel=HarshPatel')"></i>
+                           </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText4()" onmouseout="hideText4()">
+                        <h3 class="glass-title">Dog Breed Image Convolution</h3>
+                        <p id='glassText4' class="glass-info">A combination of Google Colab, Tensorflow, MatplotLib, Pandas, NumPy and a
+                            Kaggle provided dataset allowed me to create a predictive model that helps predict whether
+                            the breed of a dog from just the image.</p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/DogBreedIdentification')"></i>
+                           </a>
                         </div>
                     </div>
 
                 </div>
                 <div class="glass-card">
-                    <div class="glass-content-pre">
-                        <h2 class="glass-num">02</h2>
+                    <div class="glass-content-post" onmouseover="showText5()" onmouseout="hideText5()">
+                        <h3 class="glass-title">Heart Disease Classification</h3>
+                        <p id='glassText5' class="glass-info">A combination of Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas,
+                            NumPy, Seaborn and a Kaggle provided dataset allowed me to create a classification model
+                            that helps predict whether a patient has heart disease given certain clinical parameters.
+                        </p>
+                        <div class="glass-logo">
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification')"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="glass-content-post">
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText6()" onmouseout="hideText6()">
                         <h3 class="glass-title">California Housing Regression</h3>
-                        <p class="glass-info">A combination of Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas,
+                        <p id='glassText6' class="glass-info">A combination of Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas,
                             NumPy, Seaborn and a Kaggle provided dataset allowed me to create a regression model that
                             helps predict the price of a home in California based on it's location and some other
                             factors.</p>
                         <div>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://github.com/harshp30/CaliforniaHousingRegression')"
-                                    src="./images/github.jpg"></a>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/CaliforniaHousingRegression')"></i>
+                            </a>
                         </div>
                     </div>
-
                 </div>
                 <div class="glass-card">
-                    <div class="glass-content-pre">
-                        <h2 class="glass-num">03</h2>
-                    </div>
-                    <div class="glass-content-post">
-                        <h3 class="glass-title">Dog Breed Image Convolution</h3>
-                        <p class="glass-info">A combination of Google Colab, Tensorflow, MatplotLib, Pandas, NumPy and a
-                            Kaggle provided dataset allowed me to create a predictive model that helps predict whether
-                            the breed of a dog from just the image.</p>
+                    <div class="glass-content-post" onmouseover="showText7()" onmouseout="hideText7()">
+                        <h3 class="glass-title">PC LED Lights</h3>
+                        <p id='glassText7' class="glass-info">Used an Arduino Uno with potentiometer's, switch's, and transistors to
+                            control LED light strips within the PC, displaying both static and dynamic color ranges. The system was powered through the motherboard and the switches were physically screwed into the back plate.</p>
                         <div>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://github.com/harshp30/DogBreedIdentification')"
-                                    src="./images/github.jpg"></a>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/PCLEDLights')"></i>
+                            </a>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://youtu.be/3-z3Ae0HXrE')"></i>
+                            </a>
                         </div>
                     </div>
-
                 </div>
-                <div class="glass-card">
-                    <div class="glass-content-pre">
-                        <h2 class="glass-num">04</h2>
-                    </div>
-                    <div class="glass-content-post">
-                        <h3 class="glass-title">Autonomous RC Car</h3>
-                        <p class="glass-info">Used an Arduino Uno with a L293D Motor Drive Shield Expansion Board to
-                            control SG90 9G Servo Motors, alongside a ultrasonic distance sensor (HC-SR04) to guide a RC
-                            car automatically stopping at obstacles and turning.</p>
-                        <div>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://github.com/harshp30/AutonomousRCCar')"
-                                    src="./images/github.jpg"></a>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://youtu.be/u6Tx4LFk9bU')"
-                                    src="./images/youtube.png"></a>
-                        </div>
-                    </div>
 
-                </div>
                 <div class="glass-card">
-                    <div class="glass-content-pre">
-                        <h2 class="glass-num">05</h2>
-                    </div>
-                    <div class="glass-content-post">
+                    <div class="glass-content-post" onmouseover="showText8()" onmouseout="hideText8()">
                         <h3 class="glass-title">Basketball Mini Hoop Shot Tracker</h3>
-                        <p class="glass-info">Used an Arduino Uno with a HC-SR04 (Ultrasonic distance sensor) and the
+                        <p id='glassText8' class="glass-info">Used an Arduino Uno with a HC-SR04 (Ultrasonic distance sensor) and the
                             MPU-6050 (accelerometer and gyro) to track a basketball shot, and whether it's a make or
                             miss which would then be displayed on a LCD screen.</p>
                         <div>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://github.com/harshp30/BasketballMiniHoop')"
-                                    src="./images/github.jpg"></a>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://www.youtube.com/watch?v=VsOM16-T-PU')"
-                                    src="./images/youtube.png"></a>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/BasketballMiniHoop')"></i>
+                            </a>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=VsOM16-T-PU')"></i>
+                            </a>
                         </div>
                     </div>
-
                 </div>
-                <div class="glass-card">
-                    <div class="glass-content-pre">
-                        <h2 class="glass-num">06</h2>
-                    </div>
-                    <div class="glass-content-post">
-                        <h3 class="glass-title">Hand Gesture Controlled RC Car</h3>
-                        <p class="glass-info">Used an Arduino Nano's with a L298n (Dual Motor Driver) and the NRF24L01
-                            (radio Communicator) to have a link between the hand control and RC car.</p>
-                        <div>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://github.com/harshp30/HandGestureControlRCCar')"
-                                    src="./images/github.jpg"></a>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://youtu.be/Z1HGJux7lb4')"
-                                    src="./images/youtube.png"></a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="glass-card">
-                    <div class="glass-content-pre">
-                        <h2 class="glass-num">07</h2>
-                    </div>
-                    <div class="glass-content-post">
-                        <h3 class="glass-title">PC LED Lights</h3>
-                        <p class="glass-info">Used an Arduino Uno with potentiometer's, switch's, and transistors to
-                            control LED light strips within the PC, displaying both static and dynamic color ranges.</p>
-                        <div>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://github.com/harshp30/PCLEDLights')"
-                                    src="./images/github.jpg"></a>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://youtu.be/3-z3Ae0HXrE')"
-                                    src="./images/youtube.png"></a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="glass-card">
-                    <div class="glass-content-pre">
-                        <h2 class="glass-num">08</h2>
-                    </div>
-                    <div class="glass-content-post">
-                        <h3 class="glass-title">Inventory Management System</h3>
-                        <p class="glass-info">Used Java with the Netbeans IDE to create a terminal based inventory
-                            management system allowing small businesses to add, remove, and track inventory along with
-                            creating invoices.</p>
-                        <div>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://github.com/harshp30/Catalist')"
-                                    src="./images/github.jpg"></a>
-                            <a style="width: 40%; padding: 0;" class="glass-link"><img style="width: 50%;"
-                                onclick="window.open('https://youtu.be/B_cZSHXD4D0')"
-                                    src="./images/youtube.png"></a>
-                        </div>
-                    </div>
-
-                </div>
+                
             </div>
         </section>
         <!--END Portfolio-->
@@ -351,7 +326,7 @@
         <!--Contact Me-->
         <section id="contact-me" class="noselect">
             <h2 class="section-heading portfolio-title">Contact Me</h2>
-            <h4 class="portfolio-text">Interested in having a conversation? Feel free to reach out below.</h4>
+            <h4 class="portfolio-text">Interested in haveing a conversation? Feel free to reach out below.</h4>
             <div style="width: 70%; float:left;">
                 <div class="form-blocks">
                     <form style="width: 100%;" action="https://formspree.io/f/xayvpqyz" method="POST">
@@ -422,11 +397,83 @@
 
 
 
-
-
 </body>
 
 <script>
+
+
+    function showText1(){
+        var element = document.getElementById("glassText1");
+        element.style.opacity = "1";
+    }
+    function hideText1(){
+        var element = document.getElementById("glassText1");
+        element.style.opacity = "0";
+    }
+
+    function showText2(){
+        var element = document.getElementById("glassText2");
+        element.style.opacity = "1";
+    }
+    function hideText2(){
+        var element = document.getElementById("glassText2");
+        element.style.opacity = "0";
+    }
+
+    function showText3(){
+        var element = document.getElementById("glassText3");
+        element.style.opacity = "1";
+    }
+    function hideText3(){
+        var element = document.getElementById("glassText3");
+        element.style.opacity = "0";
+    }
+
+    function showText4(){
+        var element = document.getElementById("glassText4");
+        element.style.opacity = "1";
+    }
+    function hideText4(){
+        var element = document.getElementById("glassText4");
+        element.style.opacity = "0";
+    }
+
+    function showText5(){
+        var element = document.getElementById("glassText5");
+        element.style.opacity = "1";
+    }
+    function hideText5(){
+        var element = document.getElementById("glassText5");
+        element.style.opacity = "0";
+    }
+
+    function showText6(){
+        var element = document.getElementById("glassText6");
+        element.style.opacity = "1";
+    }
+    function hideText6(){
+        var element = document.getElementById("glassText6");
+        element.style.opacity = "0";
+    }
+
+    function showText7(){
+        var element = document.getElementById("glassText7");
+        element.style.opacity = "1";
+    }
+    function hideText7(){
+        var element = document.getElementById("glassText7");
+        element.style.opacity = "0";
+    }
+
+    function showText8(){
+        var element = document.getElementById("glassText8");
+        element.style.opacity = "1";
+    }
+    function hideText8(){
+        var element = document.getElementById("glassText8");
+        element.style.opacity = "0";
+    }
+
     (function () {
         var width,
             height,
