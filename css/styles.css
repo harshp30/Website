@@ -381,6 +381,16 @@ body::before {
     opacity: 1;
 }
 
+.portfolio-text-explore {
+    transition: opacity 0.5s;
+    opacity: 0.5;
+}
+
+.portfolio-text-explore:hover {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
 /* Contact Me */
 .form-blocks {
     width: 45%;
