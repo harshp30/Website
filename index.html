@@ -52,7 +52,7 @@
                 <!-- Nav Bar -->
                 <nav class="navbar fixed-top navbar-expand-md navbar-dark">
 
-                    <a href="#title"><img class="logo" alt="LOGO" src="images/logo.jpg"></a>
+                    <a href="#title"><img class="logo" alt="LOGO" src="images/logo.jpg" style="cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;"></a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
@@ -64,13 +64,13 @@
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#skills">SKILLS</a>
+                                <a class="nav-link" href="#skills" style="cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">SKILLS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+                                <a class="nav-link" href="#portfolio" style="cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">PORTFOLIO</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact-me">CONTACT ME</a>
+                                <a class="nav-link" href="#contact-me" style="cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">CONTACT ME</a>
                             </li>
                         </ul>
                     </div>
@@ -103,7 +103,22 @@
         <section id="skills" class="noselect">
             <h2 class="section-heading portfolio-title">Skills</h2>
             <h4 class="portfolio-text">Explore some of the skills I have learned and applied in my work.</h4>
-            <div class="glass-container" style="margin-top: 100px">
+            <div class="glass-container" style="padding-top: 100px">
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.python.org/')">Python</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.r-project.org/')">R</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.w3schools.com/cpp/')">C++</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.backtrader.com/')">Backtrader</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.quantmod.com/')">Quantmod</h3>
+                </div>
                 <div class="skill-img">
                     <h3 onclick="window.open('https://opencv.org/')">OpenCV</h3>
                 </div>
@@ -126,46 +141,16 @@
                     <h3 onclick="window.open('https://numpy.org/doc/1.22/index.html')">NumPy</h3>
                 </div>
                 <div class="skill-img">
-                    <h3 onclick="window.open('https://jupyter.org/')">Jupyter Notebook</h3>
+                    <h3 onclick="window.open('https://jupyter.org/')">Jupyter</h3>
                 </div>
                 <div class="skill-img">
                     <h3 onclick="window.open('https://mlflow.org/')">MLFlow</h3>
                 </div>
                 <div class="skill-img">
-                    <h3 onclick="window.open('https://docs.ray.io/en/latest/tune/index.html')">Ray Tuning</h3>
+                    <h3 onclick="window.open('https://docs.ray.io/en/latest/tune/index.html')">Ray Tune</h3>
                 </div>
                 <div class="skill-img">
                     <h3 onclick="window.open('https://aws.amazon.com/sagemaker/')">AWS Sagemaker</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://colab.research.google.com/?utm_source=scs-index')">Google Colab</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://git-scm.com/')">Git</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://www.python.org/')">Python</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://www.w3schools.com/html/')">HTML</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://www.w3schools.com/css/')">CSS</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://www.javascript.com/')">JavaScript</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://reactjs.org/')">React.js</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://vuejs.org/')">Vue.js</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://www.w3schools.com/cpp/')">C++</h3>
-                </div>
-                <div class="skill-img">
-                    <h3 onclick="window.open('https://www.java.com/en/')">Java</h3>
                 </div>
             </div>
 
@@ -173,16 +158,72 @@
         </section>
         <!--END Skills-->
 
+        <!-- <section id="work" class="noselect">
+            <h2 class="section-heading portfolio-title">Work History</h2>
+            <h4 class="portfolio-text">Display of some of the companies I have worked.</h4>
+            <div class="work-container" style="display: relative; width: 50%;">
+                <div>
+                    <img class="xerris" style="width: 120px;" src="./images/xerris.png">
+                    <p class="work-text">Xerris</p>
+                </div>
+                <div>
+                    <img class="friendlier" style="width: 220px;" src="./images/friendlier.png">
+                </div>
+                <div>
+                    <img class="perkinelmer" style="width: 220px;" src="./images/perkinelmer.png">
+                </div>
+            </div>
+        </section> -->
+
+
         <!--Porfolio-->
         <section id="portfolio">
             <h2 class="section-heading portfolio-title">Portfolio</h2>
-            <h4 class="portfolio-text">Hover through some of the projects I have worked on.</h4>
+            <h4 class="portfolio-text">Hover through some of these selected projects.</h4>
              <!--Refernece for glass cards: https://www.youtube.com/watch?v=hv0rNxr1XXk&ab_channel=OnlineTutorials-->
             <div class="glass-container">
                 <div class="glass-card">
                     <div class="glass-content-post" onmouseover="showText1()" onmouseout="hideText1()">
+                        <h3 class="glass-title">SVM Momentum Trading Strategy</h3>
+                        <p id='glassText1' class="glass-info">A Support Vector Machine with Momentum and Indicators Strategy implemented using Scikit-Learn, MatplotLib, Pandas,
+                            and Yahoo Finance for initial stock price data based on predicting the direction of the EURUSD=X exchange.</p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/SVMIndicatorsTradingStrategyImplementation')"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText2()" onmouseout="hideText2()">
+                        <h3 class="glass-title">Time Series Trading Strategy</h3>
+                        <p id='glassText2' class="glass-info">A time series trading strategy was implemented using a combined ARIMA + GARCH approach to explain autocorrelation within the data.
+                            Used trading strategy to get positive returns over several years in both the stock market and FOREX market.
+                        </p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/TimeSeriesTradingStrategyImplementation')"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText3()" onmouseout="hideText3()">
+                        <h3 class="glass-title">Black-Scholes Options Pricing</h3>
+                        <p id='glassText3' class="glass-info">Built a Monte Carlo simulation over 2000 iterations to make randomized adjusted closing price predictions for CCF stock 
+                            and used the mean prediction value to then use the Black-Scholes Model to predict both the put and call option price.</p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/BlackScholesOptionsPricing')"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText4()" onmouseout="hideText4()">
                         <h3 class="glass-title">Sign Language Translator</h3>
-                        <p id='glassText1' class="glass-info">A computer visison model based on OpenCV and Tesnorflow's Object detection model that can classify a series of hand sings 
+                        <p id='glassText4' class="glass-info">A computer visison model based on OpenCV and Tesnorflow's Object detection model that can classify a series of hand sings 
                             and detect what the corresponding label. This model works on a live video feed and on images, boxing in the detected object.
                         </p>
                         <div>
@@ -196,9 +237,9 @@
                     </div>
                 </div>
                 <div class="glass-card">
-                    <div class="glass-content-post" onmouseover="showText2()" onmouseout="hideText2()">
+                    <div class="glass-content-post" onmouseover="showText5()" onmouseout="hideText5()">
                         <h3 class="glass-title">Live Car Object Detection</h3>
-                        <p id='glassText2' class="glass-info">A computer visison model based on OpenCV and Tesnorflow's Object detection model that can classify a series of vehicles.
+                        <p id='glassText5' class="glass-info">A computer visison model based on OpenCV and Tesnorflow's Object detection model that can classify a series of vehicles.
                              and detect what the corresponding label. This model works on a live video feed and on images, boxing in the detected object.
                         </p>
                         <div>
@@ -212,9 +253,9 @@
                     </div>
                 </div>
                 <div class="glass-card">
-                    <div class="glass-content-post" onmouseover="showText3()" onmouseout="hideText3()">
+                    <div class="glass-content-post" onmouseover="showText6()" onmouseout="hideText6()">
                         <h3 class="glass-title">macOS Motion Controller</h3>
-                        <p id='glassText3' class="glass-info">With a combination of mediapipe and osascript I was able to perform certain function on my MacBook through
+                        <p id='glassText6' class="glass-info">With a combination of mediapipe and osascript I was able to perform certain function on my MacBook through
                             body movement. By calculating the angle between nodes on my body I was able to assign play, pause, volume control, and app launch functions.
                         </p>
                         <div>
@@ -228,9 +269,9 @@
                     </div>
                 </div>
                 <div class="glass-card">
-                    <div class="glass-content-post" onmouseover="showText4()" onmouseout="hideText4()">
+                    <div class="glass-content-post" onmouseover="showText7()" onmouseout="hideText7()">
                         <h3 class="glass-title">Dog Breed Image Convolution</h3>
-                        <p id='glassText4' class="glass-info">A combination of Google Colab, Tensorflow, MatplotLib, Pandas, NumPy and a
+                        <p id='glassText7' class="glass-info">A combination of Google Colab, Tensorflow, MatplotLib, Pandas, NumPy and a
                             Kaggle provided dataset allowed me to create a predictive model that helps predict whether
                             the breed of a dog from just the image.</p>
                         <div>
@@ -242,61 +283,15 @@
 
                 </div>
                 <div class="glass-card">
-                    <div class="glass-content-post" onmouseover="showText5()" onmouseout="hideText5()">
+                    <div class="glass-content-post" onmouseover="showText8()" onmouseout="hideText8()">
                         <h3 class="glass-title">Heart Disease Classification</h3>
-                        <p id='glassText5' class="glass-info">A combination of Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas,
+                        <p id='glassText8' class="glass-info">A combination of Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas,
                             NumPy, Seaborn and a Kaggle provided dataset allowed me to create a classification model
                             that helps predict whether a patient has heart disease given certain clinical parameters.
                         </p>
                         <div class="glass-logo">
                             <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
                                 <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/HeartDiseaseClassification')"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-card">
-                    <div class="glass-content-post" onmouseover="showText6()" onmouseout="hideText6()">
-                        <h3 class="glass-title">California Housing Regression</h3>
-                        <p id='glassText6' class="glass-info">A combination of Jupyter Notebook, Scikit-Learn, MatplotLib, Pandas,
-                            NumPy, Seaborn and a Kaggle provided dataset allowed me to create a regression model that
-                            helps predict the price of a home in California based on it's location and some other
-                            factors.</p>
-                        <div>
-                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
-                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/CaliforniaHousingRegression')"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-card">
-                    <div class="glass-content-post" onmouseover="showText7()" onmouseout="hideText7()">
-                        <h3 class="glass-title">PC LED Lights</h3>
-                        <p id='glassText7' class="glass-info">Used an Arduino Uno with potentiometer's, switch's, and transistors to
-                            control LED light strips within the PC, displaying both static and dynamic color ranges. The system was powered through the motherboard and the switches were physically screwed into the back plate.</p>
-                        <div>
-                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
-                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/PCLEDLights')"></i>
-                            </a>
-                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
-                                <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://youtu.be/3-z3Ae0HXrE')"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card">
-                    <div class="glass-content-post" onmouseover="showText8()" onmouseout="hideText8()">
-                        <h3 class="glass-title">Basketball Mini Hoop Shot Tracker</h3>
-                        <p id='glassText8' class="glass-info">Used an Arduino Uno with a HC-SR04 (Ultrasonic distance sensor) and the
-                            MPU-6050 (accelerometer and gyro) to track a basketball shot, and whether it's a make or
-                            miss which would then be displayed on a LCD screen.</p>
-                        <div>
-                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
-                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/BasketballMiniHoop')"></i>
-                            </a>
-                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
-                                <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=VsOM16-T-PU')"></i>
                             </a>
                         </div>
                     </div>
@@ -316,40 +311,40 @@
                         <!-- Name input -->
                         <div class="form-outline mb-4" style="width: 100%">
                             <div class="label">
-                                <label style="font-size: 20px;">Name</label>
+                                <label style="font-size: 20px; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">Name</label>
                             </div>
                             <div>
                                 <input id="name" name="name" type="text" class="form-control noselect"
-                                style="background: rgba(255, 255, 255, 0.1); color: white; width: 100%;" />
+                                style="border: 0.5px solid white; background: rgba(255, 255, 255, 0.1); color: white; width: 100%; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;" />
                             </div>
                         </div>
 
                         <!-- Email input -->
                         <div class="form-outline mb-4" style="width: 100%">
                             <div class="label">
-                                <label style="font-size: 20px;">Email</label>
+                                <label style="font-size: 20px; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">Email</label>
                             </div>
                             <div>
                                 <input id="email" name="email" type="email" class="form-control"
-                                style="background: rgba(255, 255, 255, 0.1); color: white;" />
+                                style="border: 0.5px solid white; background: rgba(255, 255, 255, 0.1); color: white; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;" />
                             </div>
                         </div>
 
                         <!-- Message input -->
                         <div class="form-outline mb-4" style="width: 100%">
                             <div class="label">
-                                <label style="font-size: 20px;">Message</label>
+                                <label style="font-size: 20px; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">Message</label>
                             </div>
                             <div>
                                 <textarea id="message" name="message" class="form-control" rows="6"
-                                style="background: rgba(255, 255, 255, 0.1); color: white;"></textarea>
+                                style="border: 0.5px solid white; background: rgba(255, 255, 255, 0.1); color: white; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;"></textarea>
                             </div>
                         </div>
 
                         <!-- Submit button -->
                         <div style="text-align: center;">
                             <button class="btn btn-secondary send"
-                                style="width: 40%; display: inline-block; margin-right:5px;"
+                                style="border: 1px solid white; width: 40%; display: inline-block; margin-right:5px; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;"
                                 style="background: rgba(255, 255, 255, 0.1); color: white;">Send</button>
                         </div>
                         <div style="text-align: center;">
