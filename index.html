@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Harsh Patel</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg" />
+
+    <script src="https://kit.fontawesome.com/37263448cf.js" crossorigin="anonymous"></script>
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;900&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=1.9.1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
+
+    <script type="text/javascript" src="resources/scripts/bg-animation.js"></script>
+
+
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div class="wrapper" style="z-index: 0;">
+        <!--Refernece for background effect: https://codepen.io/Gilberto06/pen/dpPWqN-->
+        <canvas id="bg-animation"></canvas>
+
+        <!--Navbar/Title-->
+        <section id="title">
+
+            <div class="container-fluid">
+
+                <!-- Nav Bar -->
+                <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+
+                    <a href="#title"><img class="logo" alt="LOGO" src="images/logo.jpg" style="cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;"></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#skills" style="cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">SKILLS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#portfolio" style="cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">PORTFOLIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact-me" style="cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">CONTACT ME</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <h3 class="name noselect">Harsh Patel</h3>
+                <div class="about-me noselect">
+                    <h3 class="about-me-text" style="color: white; font-weight: 200;">Computer Engineering student at the <span class="about-me-key" onclick="window.open('https://uwaterloo.ca/future-students/programs/computer-engineering')">University of
+                        Waterloo</span></h3>
+                    <h3 class="about-me-text" style="color: white; font-weight: 200;">Seeking Summer 2024 Internship</span></h3>
+                </div>
+
+                <div style="text-align: center;">
+                    <a class="text-arrow noselect" style="color: white">"Yesterday is history, tomorrow is a mystery, but today is a gift. That is why we call it the present." - Master Oogway</a>
+                </div>
+
+
+                <div class="arrow bounce">
+                    <a class="fa fa-arrow-down fa-2x"></a>
+                </div>
+
+
+
+        </section>
+        <!-- END Navbar/Title-->
+
+        <!--Skills-->
+        <section id="skills" class="noselect">
+            <h2 class="section-heading portfolio-title">Skills</h2>
+            <h4 class="portfolio-text">Explore some of the skills I have learned and applied in my work.</h4>
+            <div class="glass-container" style="padding-top: 100px">
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.python.org/')">Python</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.r-project.org/')">R</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.w3schools.com/cpp/')">C++</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.backtrader.com/')">Backtrader</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.quantmod.com/')">Quantmod</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://opencv.org/')">OpenCV</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://www.tensorflow.org/')">Tensorflow</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://pytorch.org/')">PyTorch</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://scikit-learn.org/stable/index.html')">Scikit-Learn</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://pandas.pydata.org/')">Pandas</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://matplotlib.org/stable/tutorials/introductory/usage.html/')">Matplotlib</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://numpy.org/doc/1.22/index.html')">NumPy</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://jupyter.org/')">Jupyter</h3>
+                </div>
+                <div class="skill-img">
+                    <h3 onclick="window.open('https://aws.amazon.com/sagemaker/')">AWS Sagemaker</h3>
+                </div>
+            </div>
+
+
+        </section>
+        <!--END Skills-->
+
+        <!-- <section id="work" class="noselect">
+            <h2 class="section-heading portfolio-title">Work History</h2>
+            <h4 class="portfolio-text">Display of some of the companies I have worked.</h4>
+            <div class="work-container" style="display: relative; width: 50%;">
+                <div>
+                    <img class="xerris" style="width: 120px;" src="./images/xerris.png">
+                    <p class="work-text">Xerris</p>
+                </div>
+                <div>
+                    <img class="friendlier" style="width: 220px;" src="./images/friendlier.png">
+                </div>
+                <div>
+                    <img class="perkinelmer" style="width: 220px;" src="./images/perkinelmer.png">
+                </div>
+            </div>
+        </section> -->
+
+
+        <!--Porfolio-->
+        <section id="portfolio">
+            <h2 class="section-heading portfolio-title">Portfolio</h2>
+            <h4 class="portfolio-text">Hover through some of these selected projects.</h4>
+             <!--Refernece for glass cards: https://www.youtube.com/watch?v=hv0rNxr1XXk&ab_channel=OnlineTutorials-->
+            <div class="glass-container">
+
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText1()" onmouseout="hideText1()">
+                        <h3 class="glass-title">SVM Momentum Trading Strategy</h3>
+                        <p id='glassText1' class="glass-info">A Support Vector Machine with Momentum and Indicators Strategy implemented using Scikit-Learn, MatplotLib, Pandas,
+                            and Yahoo Finance for initial stock price data based on predicting the direction of the EURUSD=X exchange.</p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/SVMIndicatorsTradingStrategyImplementation')"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText2()" onmouseout="hideText2()">
+                        <h3 class="glass-title">Time Series Trading Strategy</h3>
+                        <p id='glassText2' class="glass-info">A time series trading strategy was implemented using a combined ARIMA + GARCH approach to explain autocorrelation within the data.
+                            Used trading strategy to get positive returns over several years in both the stock market and FOREX market.
+                        </p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/TimeSeriesTradingStrategyImplementation')"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText3()" onmouseout="hideText3()">
+                        <h3 class="glass-title">Black-Scholes Options Pricing</h3>
+                        <p id='glassText3' class="glass-info">Built a Monte Carlo simulation over 2000 iterations to make randomized adjusted closing price predictions for CCF stock 
+                            and used the mean prediction value to then use the Black-Scholes Model to predict both the put and call option price.</p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/BlackScholesOptionsPricing')"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText4()" onmouseout="hideText4()">
+                        <h3 class="glass-title">Deep Q Learning TicTacToe</h3>
+                        <p id='glassText4' class="glass-info">A terminal based game backed by a reinforcement learning algorithm that learns how to play TicTacToe through many iterations  
+                            agaisnt itself, after many iterations the user is able to play agaisnt the trained AI
+                        </p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/DeepQLearningTicTacToe')"></i>
+                           </a>
+                           <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=sFYxJI9XsGg&ab_channel=HarshPatel')"></i>
+                           </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText5()" onmouseout="hideText5()">
+                        <h3 class="glass-title">Viola Jones Video Anonymizer</h3>
+                        <p id='glassText5' class="glass-info">A computer visison model based on OpenCV that takes in an input MP4 file and automatically
+                            adds a face blur using Viola Jones Face Detceton Algorithm and changes the voice fully anonymizing the video
+                        </p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/ViolaJonesVideoAnonymizer')"></i>
+                           </a>
+                           <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=bqDiAGqfEcs&ab_channel=HarshPatel')"></i>
+                           </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText7()" onmouseout="hideText7()">
+                        <h3 class="glass-title">Image and Video Classifier</h3>
+                        <p id='glassText7' class="glass-info">A image and video classifier using both the YOLO and SSD Computer Vision Algorithms resulting in a
+                            robust classification tool that can take PNG/JPG and MP4 files and classify all detceted objects
+                        </p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/YOLOandSSDImageVideoClassifier')"></i>
+                           </a>
+                           <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=A3sm5UYZqm8&ab_channel=HarshPatel')"></i>
+                           </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText8()" onmouseout="hideText8()">
+                        <h3 class="glass-title">Lane Detection Algorithm</h3>
+                        <p id='glassText8' class="glass-info">A lane detection algorithm based on classic Computer Vision techniques using the Canny's edge detcetion algorithm and 
+                            Hough Lines Detection Algorithm, the input MP4 containing roads has the lanes highlighted as detceted by the algorithm
+                        </p>
+                        <div class="glass-logo">
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/LaneDetectionAlgorithm')"></i>
+                            </a>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                                <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=z9s1Q1r8XOc&ab_channel=HarshPatel')"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="glass-content-post" onmouseover="showText6()" onmouseout="hideText6()">
+                        <h3 class="glass-title">macOS Motion Controller</h3>
+                        <p id='glassText6' class="glass-info">With a combination of mediapipe and osascript I was able to perform certain function on my MacBook through
+                            body movement. By calculating the angle between nodes on my body I was able to assign play, pause, volume control, and app launch functions.
+                        </p>
+                        <div>
+                            <a style="width: max-content; padding-top: 10px; padding-bottom: 10px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/MovementBasedMacOSControl')"></i>
+                           </a>
+                           <a style="width: max-content; padding-top: 10px; padding-bottom: 10px; margin-left: 25px;" class="glass-link">
+                               <i class="portfolio-logos fa-brands fa-youtube fa-2xl" onclick="window.open('https://www.youtube.com/watch?v=NXm064K_FTc&ab_channel=HarshPatel')"></i>
+                           </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h4 class="portfolio-text" style="margin-top: 50px; margin-bottom: 20px;">To explore more of my work click here   <i class="portfolio-text-explore fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/harshp30/')"></i></h4>
+        </section>
+        <!--END Portfolio-->
+
+        <!--Contact Me-->
+        <section id="contact-me" class="noselect">
+            <h2 class="section-heading portfolio-title">Contact Me</h2>
+            <h4 class="portfolio-text">Interested in haveing a conversation? Feel free to reach out below.</h4>
+            <div style="width: 70%; float:left;">
+                <div class="form-blocks">
+                    <form style="width: 100%;" action="https://formspree.io/f/xayvpqyz" method="POST">
+                        <!-- Name input -->
+                        <div class="form-outline mb-4" style="width: 100%">
+                            <div class="label">
+                                <label style="font-size: 20px; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">Name</label>
+                            </div>
+                            <div>
+                                <input id="name" name="name" type="text" class="form-control noselect"
+                                style="border: 0.5px solid white; background: rgba(255, 255, 255, 0.1); color: white; width: 100%; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;" />
+                            </div>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4" style="width: 100%">
+                            <div class="label">
+                                <label style="font-size: 20px; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">Email</label>
+                            </div>
+                            <div>
+                                <input id="email" name="email" type="email" class="form-control"
+                                style="border: 0.5px solid white; background: rgba(255, 255, 255, 0.1); color: white; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;" />
+                            </div>
+                        </div>
+
+                        <!-- Message input -->
+                        <div class="form-outline mb-4" style="width: 100%">
+                            <div class="label">
+                                <label style="font-size: 20px; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;">Message</label>
+                            </div>
+                            <div>
+                                <textarea id="message" name="message" class="form-control" rows="6"
+                                style="border: 0.5px solid white; background: rgba(255, 255, 255, 0.1); color: white; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <div style="text-align: center;">
+                            <button class="btn btn-secondary send"
+                                style="border: 1px solid white; width: 40%; display: inline-block; margin-right:5px; cursor:url(https://res.cloudinary.com/dqgvyuwoz/image/upload/c_scale,o_75,w_15/v1679813362/cursor_Background_Removed_pddejp.png), auto;"
+                                style="background: rgba(255, 255, 255, 0.1); color: white;">Send</button>
+                        </div>
+                        <div style="text-align: center;">
+                        </div>
+                        <div>
+                            <p id="error" style="margin-top: 20px; color: red;"></p>
+                        </div>
+
+                    </form>
+                    <div style="margin-bottom: 300px;"></div>
+                </div>
+            </div>
+            <div style="text-align: left;">
+                <div>
+                    <img class="linkedin" style="width: 120px; margin-top: 200px;" src="./images/linkedin.jpg"
+                        onclick="window.open('https://www.linkedin.com/in/hp30/')">
+                </div>
+            </div>
+
+        </section>
+        <!--END Contact Me-->
+
+    </div>
+
+
+
+    <!-- /wrapper -->
+
+</body>
+
+<script>
+
+
+    function showText1(){
+        var element = document.getElementById("glassText1");
+        element.style.opacity = "1";
+    }
+    function hideText1(){
+        var element = document.getElementById("glassText1");
+        element.style.opacity = "0";
+    }
+
+    function showText2(){
+        var element = document.getElementById("glassText2");
+        element.style.opacity = "1";
+    }
+    function hideText2(){
+        var element = document.getElementById("glassText2");
+        element.style.opacity = "0";
+    }
+
+    function showText3(){
+        var element = document.getElementById("glassText3");
+        element.style.opacity = "1";
+    }
+    function hideText3(){
+        var element = document.getElementById("glassText3");
+        element.style.opacity = "0";
+    }
+
+    function showText4(){
+        var element = document.getElementById("glassText4");
+        element.style.opacity = "1";
+    }
+    function hideText4(){
+        var element = document.getElementById("glassText4");
+        element.style.opacity = "0";
+    }
+
+    function showText5(){
+        var element = document.getElementById("glassText5");
+        element.style.opacity = "1";
+    }
+    function hideText5(){
+        var element = document.getElementById("glassText5");
+        element.style.opacity = "0";
+    }
+
+    function showText6(){
+        var element = document.getElementById("glassText6");
+        element.style.opacity = "1";
+    }
+    function hideText6(){
+        var element = document.getElementById("glassText6");
+        element.style.opacity = "0";
+    }
+
+    function showText7(){
+        var element = document.getElementById("glassText7");
+        element.style.opacity = "1";
+    }
+    function hideText7(){
+        var element = document.getElementById("glassText7");
+        element.style.opacity = "0";
+    }
+
+    function showText8(){
+        var element = document.getElementById("glassText8");
+        element.style.opacity = "1";
+    }
+    function hideText8(){
+        var element = document.getElementById("glassText8");
+        element.style.opacity = "0";
+    }
+
+    (function () {
+        var width,
+            height,
+            canvas,
+            ctx,
+            points,
+            target,
+            animateHeader = true;
+        var colorRGB = 255;
+
+        // Main
+        initHeader();
+        initAnimation();
+        addListeners();
+
+        function initHeader() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            target = {
+                x: width / 2,
+                y: height / 2
+            };
+
+            canvas = document.getElementById("bg-animation");
+            canvas.width = width;
+            canvas.height = height;
+            ctx = canvas.getContext("2d");
+
+            // create points
+            points = [];
+            for (var x = 0; x < width; x = x + width / 20) {
+                for (var y = 0; y < height; y = y + height / 20) {
+                    var px = x + (Math.random() * width) / 20;
+                    var py = y + (Math.random() * height) / 20;
+                    var p = {
+                        x: px,
+                        originX: px,
+                        y: py,
+                        originY: py
+                    };
+                    points.push(p);
+                }
+            }
+
+            // for each point find the 5 closest points
+            for (var i = 0; i < points.length; i++) {
+                var closest = [];
+                var p1 = points[i];
+                for (var j = 0; j < points.length; j++) {
+                    var p2 = points[j];
+                    if (!(p1 == p2)) {
+                        var placed = false;
+                        for (var k = 0; k < 5; k++) {
+                            if (!placed) {
+                                if (closest[k] == undefined) {
+                                    closest[k] = p2;
+                                    placed = true;
+                                }
+                            }
+                        }
+
+                        for (var k = 0; k < 5; k++) {
+                            if (!placed) {
+                                if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+                                    closest[k] = p2;
+                                    placed = true;
+                                }
+                            }
+                        }
+                    }
+                }
+                p1.closest = closest;
+            }
+
+            // assign a circle to each point
+            for (var i in points) {
+                var c = new Circle(
+                    points[i],
+                    2 + Math.random() * 2,
+                    "rgba(255,255,255,0.3)"
+                );
+                points[i].circle = c;
+            }
+        }
+
+        // Event handling
+        function addListeners() {
+            if (!("ontouchstart" in window)) {
+                window.addEventListener("mousemove", mouseMove);
+            }
+            window.addEventListener("scroll", resize);
+            window.addEventListener("resize", resize);
+        }
+
+        function mouseMove(e) {
+            var posx = (posy = 0);
+            if (e.pageX || e.pageY) {
+                posx = e.pageX;
+                posy = e.pageY - $(window).scrollTop();
+                absolutePosy = e.pageY;
+            } else if (e.clientX || e.clientY) {
+                posx =
+                    e.clientX +
+                    document.body.scrollLeft +
+                    document.documentElement.scrollLeft;
+                posy =
+                    e.clientY +
+                    document.body.scrollTop +
+                    document.documentElement.scrollTop;
+            }
+
+            target.x = posx;
+            target.y = posy;
+
+            if ($("body").hasClass("single-iaa_programs")) {
+                if (absolutePosy > 800) {
+                    colorRGB = 128;
+                } else {
+                    colorRGB = 255;
+                }
+            } else if ($("body").hasClass("page-template-default")) {
+                if (absolutePosy > 600) {
+                    colorRGB = 128;
+                } else {
+                    colorRGB = 255;
+                }
+            }
+        }
+
+        function scrollCheck() {}
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            ctx.canvas.width = width;
+            ctx.canvas.height = height;
+        }
+
+        // animation
+        function initAnimation() {
+            animate();
+            for (var i in points) {
+                shiftPoint(points[i]);
+            }
+        }
+
+        function animate() {
+            if (animateHeader) {
+                ctx.clearRect(0, 0, width, height);
+                for (var i in points) {
+                    // detect points in range
+                    if (Math.abs(getDistance(target, points[i])) < 4000) {
+                        points[i].active = 0.3;
+                        points[i].circle.active = 0.6;
+                    } else if (Math.abs(getDistance(target, points[i])) < 20000) {
+                        points[i].active = 0.1;
+                        points[i].circle.active = 0.3;
+                    } else if (Math.abs(getDistance(target, points[i])) < 40000) {
+                        points[i].active = 0.02;
+                        points[i].circle.active = 0.1;
+                    } else {
+                        points[i].active = 0;
+                        points[i].circle.active = 0;
+                    }
+
+                    drawLines(points[i]);
+                    points[i].circle.draw();
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        function shiftPoint(p) {
+            TweenLite.to(p, 1 + 1 * Math.random(), {
+                x: p.originX - 50 + Math.random() * 100,
+                y: p.originY - 50 + Math.random() * 100,
+                ease: Circ.easeInOut,
+                onComplete: function () {
+                    shiftPoint(p);
+                },
+            });
+        }
+
+        // Canvas manipulation
+        function drawLines(p) {
+            if (!p.active) return;
+            for (var i in p.closest) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p.closest[i].x, p.closest[i].y);
+                ctx.strokeStyle =
+                    "rgba(" +
+                    colorRGB +
+                    "," +
+                    colorRGB +
+                    "," +
+                    colorRGB +
+                    "," +
+                    p.active +
+                    ")";
+                //            ctx.strokeStyle = 'rgba(156,217,249,'+ p.active+')';
+                ctx.stroke();
+            }
+        }
+
+        function Circle(pos, rad, color) {
+            var _this = this;
+
+            // constructor
+            (function () {
+                _this.pos = pos || null;
+                _this.radius = rad || null;
+                _this.color = color || null;
+            })();
+
+            this.draw = function () {
+                if (!_this.active) return;
+                ctx.beginPath();
+                ctx.arc(
+                    _this.pos.x,
+                    _this.pos.y,
+                    _this.radius,
+                    0,
+                    2 * Math.PI,
+                    false
+                );
+                ctx.fillStyle =
+                    "rgba(" +
+                    colorRGB +
+                    "," +
+                    colorRGB +
+                    "," +
+                    colorRGB +
+                    "," +
+                    _this.active +
+                    ")";
+                ctx.fill();
+            };
+        }
+
+        // Util
+        function getDistance(p1, p2) {
+            return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+        }
+    })();
+
+
+    function reset() {
+        var name = document.getElementById('name');
+        var company = document.getElementById('company');
+        var email = document.getElementById('email');
+        var message = document.getElementById('message');
+        name.innerHTML = "";
+        company.innerHTML = "";
+        email.innerHTML = "";
+        message.innerHTML = "";
+    }
+
+    function copy() {
+        /* Get the text field */
+        var copyText = "h329pate@uwaterloo.ca";
+
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(copyText);
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied Email Address";
+    }
+
+    function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copy to clipboard";
+    }
+</script>
+
+</html>
