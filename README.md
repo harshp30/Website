@@ -1,3 +1,3 @@
 ### Webiste
 
-https://harshp30.github.io/Website/
+https://harshp30.github.io/PersonalWebsite/
