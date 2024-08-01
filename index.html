@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harsh Patel - Personal Website</title>
 <script src="https://kit.fontawesome.com/37263448cf.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <style>
     :root {
-        --bg-color: #ffffff;
+        --bg-color: #faf9f6;
         --text-color: #333333;
         --header-color: #2c3e50;
         --tile-bg: #f0f0f0;
         --tile-hover: #e0e0e0;
+        --form-border: #aaaaaa;
     }
     .dark-mode {
         --bg-color: #1a1a1a;
@@ -19,9 +21,10 @@
         --header-color: #b8b8b8;
         --tile-bg: #2a2a2a;
         --tile-hover: #3a3a3a;
+        --form-border: #555555;
     }
     body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Montserrat', sans-serif;
         line-height: 1.6;
         color: var(--text-color);
         background-color: var(--bg-color);
@@ -61,7 +64,7 @@
     .form-control {
         width: 100%;
         padding: 8px;
-        border: 1px solid #ddd;
+        border: 1px solid var(--form-border);
         border-radius: 4px;
         font-size: 14px;
         background-color: var(--bg-color);
@@ -167,8 +170,7 @@
 <body>
     <header>
         <div class="welcome-text">
-            <h1>Welcome</h1>
-            <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" alt="Waving hand">
+            <h1>Harsh Patel</h1>
         </div>
         <button id="mode-toggle" onclick="toggleMode()">
             <svg class="mode-icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -191,7 +193,7 @@
     <main>
         <section>
             <h2>About Me</h2>
-            <p>Hello! I'm Harsh Patel, a dedicated Computer Engineering student at the <strong>University of Waterloo</strong>. My passion lies in pushing the boundaries of technology and innovation, with a strong foundation in machine learning.</p>
+            <p>Hello! I'm a Computer Engineering student at the <strong>University of Waterloo</strong>. My passion lies in pushing the boundaries of technology and innovation, with a strong foundation in machine learning.</p>
             
             <p>Currently, I'm working as an <strong>Artificial Intelligence Researcher Intern</strong> at the CViSS Lab at the University of Waterloo, where I'm developing frameworks for generating synthetic 3D point cloud and mesh scenes, and creating custom semantic segmentation models for 3D environments. My professional journey includes valuable experiences as a <strong>Machine Learning Developer Intern at IBM</strong> and a <strong>Machine Learning Engineer Intern at PerkinElmer, Inc.</strong>, where I've contributed to diverse projects ranging from computer vision applications to deep reinforcement learning algorithms.</p>
             
