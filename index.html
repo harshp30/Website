@@ -158,17 +158,55 @@
     .full-width-tile {
         grid-column: 1 / -1;
     }
+    @keyframes slideInUp {
+        from {
+            transform: translate(-50%, 100%);
+            opacity: 0;
+        }
+        to {
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutDown {
+        from {
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+        to {
+            transform: translate(-50%, 100%);
+            opacity: 0;
+        }
+    }
+
     #notification {
         position: fixed;
-        bottom: 20px;
+        bottom: -100px;
         left: 50%;
         transform: translateX(-50%);
         background-color: var(--header-color);
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
-        display: none;
+        transition: bottom 0.3s ease-in-out;
+        cursor: pointer;
     }
+
+    .dark-mode #notification {
+        background-color: #4a4a4a;
+        color: #ffffff;
+    }
+
+    #notification.show {
+        bottom: 20px;
+    }
+
+    .dark-mode #notification {
+        background-color: #4a4a4a;
+        color: #ffffff;
+    }
+
     .mode-icon {
         width: 24px;
         height: 24px;
@@ -310,14 +348,38 @@
     function copyEmail(event) {
         event.preventDefault();
         const email = 'h329pate@uwaterloo.ca';
+        const notification = document.getElementById('notification');
+        
         navigator.clipboard.writeText(email).then(() => {
-            const notification = document.getElementById('notification');
+            notification.textContent = 'Email copied to clipboard!';
             notification.style.display = 'block';
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 2000);
+            setTimeout(() => notification.classList.add('show'), 10);
+            
+            // Remove any existing click event listener
+            notification.removeEventListener('click', hideNotification);
+            
+            // Add new click event listener
+            notification.addEventListener('click', hideNotification);
+
+            // Automatically hide after 2 seconds
+            setTimeout(hideNotification, 2000);
         });
     }
+
+    function hideNotification() {
+        const notification = document.getElementById('notification');
+        notification.classList.remove('show');
+    }
+
+    // Add this to your existing script
+    document.addEventListener('DOMContentLoaded', () => {
+        const notification = document.getElementById('notification');
+        notification.addEventListener('transitionend', () => {
+            if (!notification.classList.contains('show')) {
+                notification.style.display = 'none';
+            }
+        });
+    });
     </script>
 </body>
 </html>
