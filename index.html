@@ -82,6 +82,23 @@
     .btn:hover {
         opacity: 0.8;
     }
+    .dark-mode .btn {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    }
+
+    .dark-mode .btn:hover {
+        background-color: #5a5a5a;
+    }
+
+    .dark-mode .contact-logo {
+        background-color: #4a4a4a;
+        color: #ffffff;
+    }
+
+    .dark-mode .contact-logo:hover {
+        background-color: #5a5a5a;
+    }
     .contact-logos {
         display: flex;
         justify-content: center;
@@ -194,33 +211,27 @@
     <main>
         <section>
             <h2>About Me</h2>
-            <p>Hello! I'm a Computer Engineering student at the <strong>University of Waterloo</strong>. My passion lies in pushing the boundaries of technology and innovation, with a strong foundation in machine learning.</p>
+            <p>Hello! I'm a Computer Engineering student at the <strong>University of Waterloo</strong>. My passion lies in pushing the boundaries of technology and innovation, with a strong foundation in machine learning. I'm actively seeking a <strong>Winter 2025 internship/co-op</strong> opportunity where I can apply my skills in real-world scenarios and contribute to cutting-edge developments in the tech industry.</p>
             
-            <p>Currently, I'm working as an <strong>Artificial Intelligence Researcher Intern</strong> at the CViSS Lab at the University of Waterloo, where I'm developing frameworks for generating synthetic 3D point cloud and mesh scenes, and creating custom semantic segmentation models for 3D environments. My professional journey includes valuable experiences as a <strong>Machine Learning Developer Intern at IBM</strong> and a <strong>Machine Learning Engineer Intern at PerkinElmer, Inc.</strong>, where I've contributed to diverse projects ranging from computer vision applications to deep reinforcement learning algorithms.</p>
+            <p>I recently completed my role as an <strong>Artificial Intelligence Researcher Intern</strong> at the CViSS Lab at the University of Waterloo, where I developed frameworks for generating synthetic 3D point cloud and mesh scenes, and created custom semantic segmentation models for 3D environments. My professional journey includes valuable experiences as a <strong>Machine Learning Developer Intern at IBM</strong> and a <strong>Machine Learning Engineer Intern at PerkinElmer, Inc.</strong>, where I've contributed to diverse projects ranging from computer vision applications to deep reinforcement learning algorithms.</p>
             
-            <p>My expertise spans machine learning, computer vision, and quantitative finance. I've applied these skills in various projects, from developing sophisticated trading strategies to creating advanced video processing algorithms. Currently, I'm working on exciting personal projects, including:</p>
-            <ul>
-                <li>An AI-driven trading bot for optimizing my own investment strategies</li>
-                <li>A cutting-edge project inspired by a recent Google DeepMind research paper (more details coming soon!)</li>
-            </ul>
-            
-            <p>I'm always eager to take on new challenges and collaborate on innovative projects. For my next step, I'm actively seeking a <strong>Winter 2025 internship</strong> opportunity where I can apply my skills in real-world scenarios and contribute to cutting-edge developments in the tech industry.</p>
+            <p>I'm always eager to take on new challenges and dive into innovative projects. My journey in tech is driven by a constant desire to learn and grow. I'm excited to continue expanding my skills through internships and personal projects, pushing the boundaries of what's possible with AI and machine learning. Curious about what I've been working on? Check out some of my work below!</p>
         </section>
         
         <section>
             <h2>Featured Projects</h2>
             <div class="tile-container">
+                <div class="tile" onclick="window.open('https://github.com/harshp30/360CameraToBirdsEyeView', '_blank')">
+                    <h3>Cam2BEV: Multi-View Camera to Bird's Eye View Transformation</h3>
+                    <p>Developed a computer vision system that transforms multi-view camera images into bird's eye view representation using a custom UNetXST architecture.</p>
+                </div>
                 <div class="tile" onclick="window.open('https://github.com/harshp30/ManufacturingAnomalyDetection', '_blank')">
                     <h3>Daisy Chained Classification and Segmentation Models</h3>
                     <p>Implemented a daisy-chained inference pipeline for anomaly detection in manufacturing processes using PyTorch, OpenCV, and Albumentations.</p>
                 </div>
-                <div class="tile" onclick="window.open('https://github.com/harshp30/ViolaJonesVideoAnonymizer', '_blank')">
-                    <h3>Viola Jones Video Anonymizer</h3>
-                    <p>Developed a video anonymizer using Viola-Jones algorithm for face detection and blurring, implemented with Python and OpenCV.</p>
-                </div>
-                <div class="tile" onclick="window.open('https://github.com/harshp30/FewShotHandClassificationGestureController', '_blank')">
-                    <h3>Few-Shot Hand Classification Controller</h3>
-                    <p>Created a hand gesture recognition system for music playback control using PyTorch, OpenCV, and a HybridResNetTransformer model.</p>
+                <div class="tile" onclick="window.open('https://github.com/harshp30/NLPResumeScreening', '_blank')">
+                    <h3>NLP Resume Screening</h3>
+                    <p>Implemented a comprehensive resume screening system using advanced NLP techniques to evaluate resumes against job descriptions, providing match percentages and detailed feedback.</p>
                 </div>
                 <div class="tile" onclick="window.open('https://github.com/harshp30/TensorRTNeMoAssistantEnsemble', '_blank')">
                     <h3>TensorRT and Nvidia NeMo Terminal Assistant</h3>
@@ -235,14 +246,14 @@
                     <p>Backtested a portfolio of five ETFs using the Inverse Volatility Method, implemented in Python with Pandas and Matplotlib.</p>
                 </div>
             </div>
-        </section>
+           </section>
         
         <section>
             <h2>Publications</h2>
             <div class="tile-container">
                 <div class="tile full-width-tile" onclick="window.open('', '_blank')">
                     <h3>Realistic Procedural Generation of Synthetic Point Cloud Segmentation Datasets</h3>
-                    <p>Collaborating on a research paper related to procedural data generation for 3D point cloud scenes. Performing comparative analysis to check for network performance from synthetic data vs existing datasets. Co-authoring alongside Daniel Lopez Morales, to be published in August 2024.</p>
+                    <p>Collaborating on a research paper related to procedural data generation for 3D point cloud scenes. Performing comparative analysis to check for network performance from synthetic data vs existing datasets. Co-authoring alongside Daniel Lopez Morales, to be published in September 2024.</p>
                 </div>
             </div>
         </section>
