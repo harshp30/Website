@@ -28,7 +28,7 @@
         line-height: 1.6;
         color: var(--text-color);
         background-color: var(--bg-color);
-        transition: background-color 0.3s, color 0.3s;
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
@@ -70,6 +70,7 @@
         font-size: 14px;
         background-color: var(--bg-color);
         color: var(--text-color);
+        transition: background-color 0.5s ease, color 0.5s ease;
     }
     .btn {
         padding: 8px 16px;
@@ -78,24 +79,22 @@
         border: none;
         border-radius: 4px;
         font-size: 14px;
+        transition: background-color 0.5s ease, opacity 0.3s;
     }
     .btn:hover {
         opacity: 0.8;
     }
     .dark-mode .btn {
-    background-color: #4a4a4a;
-    color: #ffffff;
+        background-color: #4a4a4a;
+        color: #ffffff;
     }
-
     .dark-mode .btn:hover {
         background-color: #5a5a5a;
     }
-
     .dark-mode .contact-logo {
         background-color: #4a4a4a;
         color: #ffffff;
     }
-
     .dark-mode .contact-logo:hover {
         background-color: #5a5a5a;
     }
@@ -116,6 +115,7 @@
         color: white;
         text-decoration: none;
         font-size: 20px;
+        transition: background-color 0.5s ease, color 0.5s ease;
     }
     .contact-logo:hover {
         opacity: 0.8;
@@ -129,7 +129,7 @@
         background-color: var(--tile-bg);
         border-radius: 8px;
         padding: 15px;
-        transition: outline 0.3s;
+        transition: outline 0.3s, background-color 0.5s;
         outline: 2px solid transparent;
     }
     .tile:hover {
@@ -154,59 +154,30 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        transition: background-color 0.5s ease, color 0.5s ease;
     }
     .full-width-tile {
         grid-column: 1 / -1;
     }
-    @keyframes slideInUp {
-        from {
-            transform: translate(-50%, 100%);
-            opacity: 0;
-        }
-        to {
-            transform: translate(-50%, 0);
-            opacity: 1;
-        }
+    @keyframes rotateSun {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
     }
-
-    @keyframes slideOutDown {
-        from {
-            transform: translate(-50%, 0);
-            opacity: 1;
-        }
-        to {
-            transform: translate(-50%, 100%);
-            opacity: 0;
-        }
+    @keyframes rotateMoon {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(-360deg); }
     }
-
-    #notification {
-        position: fixed;
-        bottom: -100px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: var(--header-color);
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: bottom 0.3s ease-in-out;
-        cursor: pointer;
+    .sun-icon.transition,
+    .moon-icon.transition {
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
     }
-
-    .dark-mode #notification {
-        background-color: #4a4a4a;
-        color: #ffffff;
+    .sun-icon.transition {
+        animation-name: rotateSun;
     }
-
-    #notification.show {
-        bottom: 20px;
+    .moon-icon.transition {
+        animation-name: rotateMoon;
     }
-
-    .dark-mode #notification {
-        background-color: #4a4a4a;
-        color: #ffffff;
-    }
-
     .mode-icon {
         width: 24px;
         height: 24px;
@@ -220,6 +191,27 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
+    }
+    #notification {
+        position: fixed;
+        bottom: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--header-color);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: bottom 0.3s ease-in-out;
+        cursor: pointer;
+        display: none; /* Hide the notification initially */
+    }
+    .dark-mode #notification {
+        background-color: #4a4a4a;
+        color: #ffffff;
+    }
+    #notification.show {
+        display: block;
+        bottom: 20px;
     }
 </style>
 </head>
@@ -335,7 +327,15 @@
         const body = document.body;
         const sunIcon = document.querySelector('.sun-icon');
         const moonIcon = document.querySelector('.moon-icon');
+
+        // Add rotation animation class
+        sunIcon.classList.add('transition');
+        moonIcon.classList.add('transition');
+
+        // Toggle dark mode
         body.classList.toggle('dark-mode');
+        
+        // Switch visibility of sun/moon icons
         if (body.classList.contains('dark-mode')) {
             sunIcon.style.display = 'none';
             moonIcon.style.display = 'block';
@@ -343,6 +343,12 @@
             sunIcon.style.display = 'block';
             moonIcon.style.display = 'none';
         }
+
+        // Remove rotation animation class after animation completes
+        setTimeout(() => {
+            sunIcon.classList.remove('transition');
+            moonIcon.classList.remove('transition');
+        }, 500); // Match with animation duration
     }
 
     function copyEmail(event) {
@@ -371,7 +377,6 @@
         notification.classList.remove('show');
     }
 
-    // Add this to your existing script
     document.addEventListener('DOMContentLoaded', () => {
         const notification = document.getElementById('notification');
         notification.addEventListener('transitionend', () => {
