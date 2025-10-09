@@ -6,6 +6,24 @@
 <title>Harsh Patel</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+    :root {
+        --bg-color: #e8f4f8;
+        --text-color: #2c3e50;
+        --text-secondary: #3d4f5c;
+        --link-color: #2c3e50;
+        --toggle-color: #2c3e50;
+        --toggle-color-rgb: 44, 62, 80;
+    }
+    
+    body.dark-mode {
+        --bg-color: #0f1419;
+        --text-color: #e6edf3;
+        --text-secondary: #b8c5d0;
+        --link-color: #e6edf3;
+        --toggle-color: #e6edf3;
+        --toggle-color-rgb: 230, 237, 243;
+    }
+    
     * {
         margin: 0;
         padding: 0;
@@ -15,8 +33,8 @@
     body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         line-height: 1.8;
-        color: #2c3e50;
-        background-color: #e8f4f8;
+        color: var(--text-color);
+        background-color: var(--bg-color);
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -30,6 +48,7 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
     
     .blob {
@@ -44,7 +63,8 @@
         border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
         filter: blur(40px);
         animation: blob-move 30s cubic-bezier(0.4, 0.2, 0.6, 0.8) infinite, 
-                   blob-morph 10s ease-in-out infinite;
+                   blob-morph 10s ease-in-out infinite,
+                   blob-blur 12s ease-in-out infinite;
         z-index: 1;
         mix-blend-mode: normal;
     }
@@ -61,7 +81,8 @@
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
         filter: blur(40px);
         animation: blob-move2 25s cubic-bezier(0.4, 0.2, 0.6, 0.8) infinite, 
-                   blob-morph2 8s ease-in-out infinite;
+                   blob-morph2 8s ease-in-out infinite,
+                   blob-blur2 15s ease-in-out infinite;
         z-index: 1;
         mix-blend-mode: normal;
     }
@@ -168,6 +189,18 @@
         }
     }
     
+    @keyframes blob-blur {
+        0%, 100% {
+            filter: blur(1px);
+        }
+    }
+    
+    @keyframes blob-blur2 {
+        0%, 100% {
+            filter: blur(1px);
+        }
+    }
+    
     .container {
         max-width: 480px;
         position: relative;
@@ -178,26 +211,77 @@
         font-size: 1.5rem;
         font-weight: 400;
         margin-bottom: 1.5rem;
-        color: #2c3e50;
+        color: var(--text-color);
         letter-spacing: -0.02em;
     }
     
     p {
         font-size: 0.95rem;
-        color: #546e7a;
+        color: var(--text-secondary);
         line-height: 2;
         font-weight: 300;
     }
     
     a {
-        color: #2c3e50;
+        color: var(--link-color);
         text-decoration: none;
-        border-bottom: 1px solid #2c3e50;
+        border-bottom: 1px solid var(--link-color);
         transition: opacity 0.2s ease;
     }
     
     a:hover {
         opacity: 0.6;
+    }
+    
+    .theme-toggle {
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        background: transparent;
+        border: 1px solid var(--toggle-color);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 100;
+        padding: 0.5rem;
+        border-radius: 8px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .theme-toggle:hover {
+        background: rgba(var(--toggle-color-rgb), 0.05);
+        transform: translateY(-2px);
+    }
+    
+    .theme-icon {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                    opacity 0.3s ease;
+    }
+    
+    .theme-icon.rotate-out {
+        transform: rotate(360deg) scale(0);
+        opacity: 0;
+    }
+    
+    .sun-icon {
+        stroke: var(--toggle-color);
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    
+    .moon-icon {
+        stroke: var(--toggle-color);
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
     }
     
     @media (max-width: 768px) {
@@ -212,16 +296,42 @@
         p {
             font-size: 0.9rem;
         }
+        
+        .theme-toggle {
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 32px;
+            height: 32px;
+        }
+        
+        .theme-icon {
+            width: 16px;
+            height: 16px;
+        }
     }
 </style>
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg id="theme-icon" class="theme-icon sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+    </button>
+    
     <div class="blob"></div>
     <div class="blob2"></div>
     <div class="container">
         <h1>Harsh Patel</h1>
         <p>
-            Computer Engineering Student at the University of Waterloo
+            University of Waterloo
             <br><br>
             Incoming Autopilot AI Intern at Tesla
             <br><br>
@@ -231,12 +341,72 @@
         </div>
 
     <script>
-    function copyEmail(event) {
-        event.preventDefault();
-        const email = 'h329pate@uwaterloo.ca';
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            // Add rotate-out animation
+            themeIcon.classList.add('rotate-out');
+            
+            setTimeout(() => {
+                body.classList.toggle('dark-mode');
+                
+                if (body.classList.contains('dark-mode')) {
+                    // Switch to moon icon
+                    themeIcon.innerHTML = `
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    `;
+                    themeIcon.classList.remove('sun-icon');
+                    themeIcon.classList.add('moon-icon');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    // Switch to sun icon
+                    themeIcon.innerHTML = `
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    `;
+                    themeIcon.classList.remove('moon-icon');
+                    themeIcon.classList.add('sun-icon');
+                    localStorage.setItem('theme', 'light');
+                }
+                
+                // Remove rotate-out class to allow icon to rotate back in
+                requestAnimationFrame(() => {
+                    themeIcon.classList.remove('rotate-out');
+                });
+            }, 300);
+        }
         
-        navigator.clipboard.writeText(email).then(() => {
-                // Optional: You could add visual feedback here
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            
+            // Only apply dark mode if explicitly saved
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeIcon.innerHTML = `
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                `;
+                themeIcon.className = 'theme-icon moon-icon';
+            }
+            // Otherwise stay in light mode (default)
+        });
+        
+        // Email copy functionality
+        function copyEmail(event) {
+            event.preventDefault();
+            const email = 'h329pate@uwaterloo.ca';
+            
+            navigator.clipboard.writeText(email).then(() => {
                 const link = event.target;
                 const originalText = link.textContent;
                 link.textContent = 'Copied!';
