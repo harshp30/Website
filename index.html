@@ -4,24 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harsh Patel</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
     :root {
-        --bg-color: #e8f4f8;
-        --text-color: #2c3e50;
-        --text-secondary: #3d4f5c;
-        --link-color: #2c3e50;
-        --toggle-color: #2c3e50;
-        --toggle-color-rgb: 44, 62, 80;
+        --bg-color: #ffffff;
+        --text-primary: #000000;
+        --text-secondary: #666666;
+        --border-color: #e5e5e5;
+        --hover-color: #000000;
     }
     
     body.dark-mode {
-        --bg-color: #0f1419;
-        --text-color: #e6edf3;
-        --text-secondary: #b8c5d0;
-        --link-color: #e6edf3;
-        --toggle-color: #e6edf3;
-        --toggle-color-rgb: 230, 237, 243;
+        --bg-color: #000000;
+        --text-primary: #ffffff;
+        --text-secondary: #a0a0a0;
+        --border-color: #2a2a2a;
+        --hover-color: #ffffff;
     }
     
     * {
@@ -31,253 +29,139 @@
     }
     
     body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        line-height: 1.8;
-        color: var(--text-color);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         background-color: var(--bg-color);
+        color: var(--text-primary);
         min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 2rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        position: relative;
-        overflow: hidden;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    
-    .blob {
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        background: linear-gradient(135deg, 
-            rgba(110, 231, 183, 0.8) 0%,
-            rgba(59, 130, 246, 0.8) 50%,
-            rgba(147, 51, 234, 0.7) 100%
-        );
-        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-        filter: blur(40px);
-        animation: blob-move 30s cubic-bezier(0.4, 0.2, 0.6, 0.8) infinite, 
-                   blob-morph 10s ease-in-out infinite,
-                   blob-blur 12s ease-in-out infinite;
-        z-index: 1;
-        mix-blend-mode: normal;
-    }
-    
-    .blob2 {
-        position: absolute;
-        width: 450px;
-        height: 450px;
-        background: linear-gradient(135deg, 
-            rgba(255, 90, 120, 0.75) 0%,
-            rgba(255, 140, 100, 0.75) 50%,
-            rgba(255, 200, 80, 0.7) 100%
-        );
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        filter: blur(40px);
-        animation: blob-move2 25s cubic-bezier(0.4, 0.2, 0.6, 0.8) infinite, 
-                   blob-morph2 8s ease-in-out infinite,
-                   blob-blur2 15s ease-in-out infinite;
-        z-index: 1;
-        mix-blend-mode: normal;
-    }
-    
-    @keyframes blob-move {
-        0% {
-            transform: translate(-25vw, 15vh) scale(1);
-        }
-        8% {
-            transform: translate(-10vw, -5vh) scale(1.01);
-        }
-        16% {
-            transform: translate(10vw, -30vh) scale(1.03);
-        }
-        24% {
-            transform: translate(25vw, -20vh) scale(1.02);
-        }
-        32% {
-            transform: translate(35vw, 5vh) scale(0.97);
-        }
-        40% {
-            transform: translate(20vw, 20vh) scale(0.99);
-        }
-        48% {
-            transform: translate(-5vw, 30vh) scale(1.02);
-        }
-        56% {
-            transform: translate(-20vw, 15vh) scale(1.01);
-        }
-        64% {
-            transform: translate(-35vw, -10vh) scale(0.98);
-        }
-        72% {
-            transform: translate(-15vw, -25vh) scale(0.97);
-        }
-        80% {
-            transform: translate(15vw, -15vh) scale(1.04);
-        }
-        88% {
-            transform: translate(5vw, 25vh) scale(1.01);
-        }
-        96% {
-            transform: translate(-15vw, 35vh) scale(0.96);
-        }
-        100% {
-            transform: translate(-25vw, 15vh) scale(1);
-        }
-    }
-    
-    @keyframes blob-morph {
-        0%, 100% {
-            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-        }
-        25% {
-            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        }
-        50% {
-            border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-        }
-        75% {
-            border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%;
-        }
-    }
-    
-    @keyframes blob-move2 {
-        0% {
-            transform: translate(30vw, -20vh) scale(1);
-        }
-        10% {
-            transform: translate(15vw, 15vh) scale(1.02);
-        }
-        22% {
-            transform: translate(-25vw, 25vh) scale(0.96);
-        }
-        35% {
-            transform: translate(-40vw, -10vh) scale(1.05);
-        }
-        48% {
-            transform: translate(-10vw, -35vh) scale(0.98);
-        }
-        60% {
-            transform: translate(25vw, -30vh) scale(1.03);
-        }
-        73% {
-            transform: translate(40vw, 10vh) scale(0.94);
-        }
-        86% {
-            transform: translate(10vw, 35vh) scale(1.01);
-        }
-        100% {
-            transform: translate(30vw, -20vh) scale(1);
-        }
-    }
-    
-    @keyframes blob-morph2 {
-        0%, 100% {
-            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        }
-        33% {
-            border-radius: 30% 70% 60% 40% / 40% 60% 40% 60%;
-        }
-        66% {
-            border-radius: 50% 50% 40% 60% / 70% 30% 60% 40%;
-        }
-    }
-    
-    @keyframes blob-blur {
-        0%, 100% {
-            filter: blur(1px);
-        }
-    }
-    
-    @keyframes blob-blur2 {
-        0%, 100% {
-            filter: blur(1px);
-        }
     }
     
     .container {
-        max-width: 480px;
-        position: relative;
-        z-index: 10;
+        max-width: 520px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    header {
+        margin-bottom: 2.5rem;
     }
     
     h1 {
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 1.5rem;
-        color: var(--text-color);
+        font-size: 2rem;
+        font-weight: 600;
         letter-spacing: -0.02em;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
     }
     
-    p {
-        font-size: 0.95rem;
+    .subtitle {
+        font-size: 1rem;
         color: var(--text-secondary);
-        line-height: 2;
-        font-weight: 300;
+        font-weight: 400;
+        line-height: 1.7;
     }
     
-    a {
-        color: var(--link-color);
+    .section {
+        margin-bottom: 2rem;
+    }
+    
+    .currently {
+        padding: 1.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        background-color: transparent;
+        transition: border-color 0.2s ease;
+    }
+    
+    .currently:hover {
+        border-color: var(--text-primary);
+    }
+    
+    .currently-label {
+        font-size: 0.8125rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-secondary);
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+    }
+    
+    .currently-title {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+    
+    .currently-date {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+    
+    .links {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .link {
+        color: var(--text-secondary);
         text-decoration: none;
-        border-bottom: 1px solid var(--link-color);
-        transition: opacity 0.2s ease;
+        font-size: 0.9375rem;
+        position: relative;
+        transition: color 0.2s ease;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
     }
     
-    a:hover {
-        opacity: 0.6;
+    .link:not(:last-child)::after {
+        content: '|';
+        position: absolute;
+        right: -0.5rem;
+        color: var(--text-secondary);
+        pointer-events: none;
+    }
+    
+    .link:hover {
+        color: var(--text-primary);
     }
     
     .theme-toggle {
         position: fixed;
         top: 2rem;
         right: 2rem;
+        width: 40px;
+        height: 40px;
         background: transparent;
-        border: 1px solid var(--toggle-color);
+        border: 1px solid var(--border-color);
+        border-radius: 50%;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
         z-index: 100;
-        padding: 0.5rem;
-        border-radius: 8px;
-        width: 36px;
-        height: 36px;
     }
     
     .theme-toggle:hover {
-        background: rgba(var(--toggle-color-rgb), 0.05);
-        transform: translateY(-2px);
+        border-color: var(--text-primary);
+        transform: rotate(180deg);
     }
     
     .theme-icon {
         width: 18px;
         height: 18px;
-        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
-                    opacity 0.3s ease;
-    }
-    
-    .theme-icon.rotate-out {
-        transform: rotate(360deg) scale(0);
-        opacity: 0;
-    }
-    
-    .sun-icon {
-        stroke: var(--toggle-color);
-        fill: none;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-    }
-    
-    .moon-icon {
-        stroke: var(--toggle-color);
+        stroke: var(--text-primary);
         fill: none;
         stroke-width: 2;
         stroke-linecap: round;
@@ -290,118 +174,128 @@
         }
         
         h1 {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
         }
         
-        p {
-            font-size: 0.9rem;
+        .subtitle {
+            font-size: 0.9375rem;
+        }
+        
+        .currently {
+            padding: 1.25rem;
+        }
+        
+        .currently-title {
+            font-size: 1rem;
         }
         
         .theme-toggle {
             top: 1.5rem;
             right: 1.5rem;
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
         }
         
         .theme-icon {
             width: 16px;
             height: 16px;
         }
+        
+        .links {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .link {
+            padding: 0.5rem 0.75rem;
+        }
+        
+        .link:not(:last-child)::after {
+            content: none;
+        }
     }
 </style>
 </head>
-<body>
+<body class="dark-mode">
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <svg id="theme-icon" class="theme-icon sun-icon" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        <svg id="theme-icon" class="theme-icon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
     </button>
     
-    <div class="blob"></div>
-    <div class="blob2"></div>
     <div class="container">
-        <h1>Harsh Patel</h1>
-        <p>
-            University of Waterloo
-            <br><br>
-            Incoming Autopilot AI Intern at Tesla
-            <br><br>
-            <a href="#" onclick="copyEmail(event)">Email</a> / 
-            <a href="https://www.linkedin.com/in/hp30/" target="_blank">LinkedIn</a>
-        </p>
+        <header>
+            <h1>Harsh Patel</h1>
+            <p class="subtitle">AI Research Engineer</p>
+            <p class="subtitle">Engineering @ University of Waterloo</p>
+        </header>
+        
+        <div class="currently">
+            <div class="currently-label">Currently</div>
+            <div class="currently-title">Autopilot AI Intern at Tesla</div>
+            <div class="currently-date">Starting January 2026</div>
         </div>
+        
+        <section class="section">
+            <div class="links">
+                <a href="#" onclick="copyEmail(event)" class="link">Email</a>
+                <a href="https://www.linkedin.com/in/hp30/" target="_blank" class="link">LinkedIn</a>
+                <a href="https://github.com/harshp30" target="_blank" class="link">GitHub</a>
+                <a href="https://calendly.com/harshnpateledu/30min" target="_blank" class="link">Calendly</a>
+            </div>
+        </section>
+    </div>
 
     <script>
-        // Theme toggle functionality
         function toggleTheme() {
             const body = document.body;
             const themeIcon = document.getElementById('theme-icon');
             
-            // Add rotate-out animation
-            themeIcon.classList.add('rotate-out');
+            body.classList.toggle('dark-mode');
             
-            setTimeout(() => {
-                body.classList.toggle('dark-mode');
-                
-                if (body.classList.contains('dark-mode')) {
-                    // Switch to moon icon
-                    themeIcon.innerHTML = `
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    `;
-                    themeIcon.classList.remove('sun-icon');
-                    themeIcon.classList.add('moon-icon');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    // Switch to sun icon
-                    themeIcon.innerHTML = `
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    `;
-                    themeIcon.classList.remove('moon-icon');
-                    themeIcon.classList.add('sun-icon');
-                    localStorage.setItem('theme', 'light');
-                }
-                
-                // Remove rotate-out class to allow icon to rotate back in
-                requestAnimationFrame(() => {
-                    themeIcon.classList.remove('rotate-out');
-                });
-            }, 300);
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.innerHTML = `
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                `;
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.innerHTML = `
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                `;
+                localStorage.setItem('theme', 'light');
+            }
         }
         
-        // Load saved theme on page load
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme');
             const themeIcon = document.getElementById('theme-icon');
             
-            // Only apply dark mode if explicitly saved
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
+            // Default is dark mode (set in body class)
+            // Only switch to light if explicitly saved
+            if (savedTheme === 'light') {
+                document.body.classList.remove('dark-mode');
                 themeIcon.innerHTML = `
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                 `;
-                themeIcon.className = 'theme-icon moon-icon';
             }
-            // Otherwise stay in light mode (default)
         });
         
-        // Email copy functionality
         function copyEmail(event) {
             event.preventDefault();
             const email = 'h329pate@uwaterloo.ca';
