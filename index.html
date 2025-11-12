@@ -4,24 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harsh Patel</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-    :root {
-        --bg-color: #ffffff;
-        --text-primary: #000000;
-        --text-secondary: #666666;
-        --border-color: #e5e5e5;
-        --hover-color: #000000;
-    }
-    
-    body.dark-mode {
-        --bg-color: #000000;
-        --text-primary: #ffffff;
-        --text-secondary: #a0a0a0;
-        --border-color: #2a2a2a;
-        --hover-color: #ffffff;
-    }
-    
     * {
         margin: 0;
         padding: 0;
@@ -29,273 +13,256 @@
     }
     
     body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-primary);
+        font-family: 'JetBrains Mono', 'Courier New', monospace;
+        background: #ffffff;
+        color: #000000;
         min-height: 100vh;
+        padding: 4rem 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2rem;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    
-    .container {
-        max-width: 520px;
-        width: 100%;
-        text-align: center;
-    }
-    
-    header {
-        margin-bottom: 2.5rem;
-    }
-    
-    h1 {
-        font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: -0.02em;
-        margin-bottom: 0.5rem;
-        color: var(--text-primary);
-    }
-    
-    .subtitle {
-        font-size: 1rem;
-        color: var(--text-secondary);
-        font-weight: 400;
-        line-height: 1.7;
-    }
-    
-    .section {
-        margin-bottom: 2rem;
-    }
-    
-    .currently {
-        padding: 1.5rem;
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
-        margin-bottom: 2rem;
-        background-color: transparent;
-        transition: border-color 0.2s ease;
-    }
-    
-    .currently:hover {
-        border-color: var(--text-primary);
-    }
-    
-    .currently-label {
-        font-size: 0.8125rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--text-secondary);
-        margin-bottom: 0.75rem;
-        font-weight: 500;
-    }
-    
-    .currently-title {
-        font-size: 1.125rem;
-        font-weight: 500;
-        color: var(--text-primary);
-        margin-bottom: 0.5rem;
-        line-height: 1.4;
-    }
-    
-    .currently-date {
-        font-size: 0.875rem;
-        color: var(--text-secondary);
-    }
-    
-    .links {
-        display: flex;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .link {
-        color: var(--text-secondary);
-        text-decoration: none;
-        font-size: 0.9375rem;
+        font-size: 13px;
+        line-height: 1.8;
         position: relative;
-        transition: color 0.2s ease;
-        padding: 0.5rem 0.75rem;
-        border-radius: 6px;
+        overflow: hidden;
     }
     
-    .link:not(:last-child)::after {
-        content: '|';
-        position: absolute;
-        right: -0.5rem;
-        color: var(--text-secondary);
+    .bg-shapes {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
         pointer-events: none;
     }
     
+    .blob {
+        position: absolute;
+        filter: blur(60px);
+        opacity: 0.4;
+    }
+    
+    @keyframes hueRotate {
+        0% { filter: blur(60px) hue-rotate(0deg); }
+        100% { filter: blur(60px) hue-rotate(360deg); }
+    }
+    
+    .blob-1 {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        top: 10%;
+        left: 10%;
+        animation: float1 8s ease-in-out infinite, hueRotate 12s linear infinite;
+    }
+    
+    .blob-2 {
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        top: 20%;
+        right: 15%;
+        animation: float2 7s ease-in-out infinite, hueRotate 15s linear infinite;
+    }
+    
+    .blob-3 {
+        width: 350px;
+        height: 350px;
+        background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%;
+        top: 50%;
+        left: 5%;
+        animation: float3 9s ease-in-out infinite, hueRotate 18s linear infinite;
+    }
+    
+    .blob-4 {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(135deg, #a78bfa 0%, #6366f1 100%);
+        border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%;
+        top: 70%;
+        right: 20%;
+        animation: float4 6s ease-in-out infinite, hueRotate 14s linear infinite;
+    }
+    
+    .blob-5 {
+        width: 280px;
+        height: 280px;
+        background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+        border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%;
+        top: 30%;
+        left: 80%;
+        animation: float5 7.5s ease-in-out infinite, hueRotate 16s linear infinite;
+    }
+    
+    .blob-6 {
+        width: 220px;
+        height: 220px;
+        background: linear-gradient(135deg, #ec4899 0%, #a78bfa 100%);
+        border-radius: 30% 70% 50% 50% / 50% 50% 50% 50%;
+        bottom: 15%;
+        left: 30%;
+        animation: float6 8.5s ease-in-out infinite, hueRotate 13s linear infinite;
+    }
+    
+    .blob-7 {
+        width: 320px;
+        height: 320px;
+        background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+        border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%;
+        bottom: 20%;
+        right: 10%;
+        animation: float7 9.5s ease-in-out infinite, hueRotate 17s linear infinite;
+    }
+    
+    @keyframes float1 {
+        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        33% { transform: translate(150px, -200px) scale(1.1); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        66% { transform: translate(-120px, 150px) scale(0.9); border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%; }
+    }
+    
+    @keyframes float2 {
+        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        50% { transform: translate(-180px, 200px) scale(1.15); border-radius: 30% 70% 50% 50% / 50% 50% 50% 50%; }
+    }
+    
+    @keyframes float3 {
+        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%; }
+        25% { transform: translate(200px, -150px) scale(1.05); border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%; }
+        50% { transform: translate(-150px, -220px) scale(0.95); border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%; }
+        75% { transform: translate(-200px, 120px) scale(1.1); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    }
+    
+    @keyframes float4 {
+        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%; }
+        50% { transform: translate(220px, -250px) scale(1.2); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    }
+    
+    @keyframes float5 {
+        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%; }
+        33% { transform: translate(-200px, 180px) scale(1.1); border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%; }
+        66% { transform: translate(180px, -120px) scale(0.9); border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%; }
+    }
+    
+    @keyframes float6 {
+        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 30% 70% 50% 50% / 50% 50% 50% 50%; }
+        50% { transform: translate(-220px, -180px) scale(1.15); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    }
+    
+    @keyframes float7 {
+        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%; }
+        25% { transform: translate(180px, 200px) scale(1.05); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        50% { transform: translate(-200px, 180px) scale(0.95); border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%; }
+        75% { transform: translate(150px, -150px) scale(1.1); border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%; }
+    }
+    
+    .container {
+        max-width: 500px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .name {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+    }
+    
+    .meta {
+        font-size: 13px;
+        color: #666666;
+        margin-bottom: 0.25rem;
+    }
+    
+    .section {
+        margin-top: 2.5rem;
+        margin-bottom: 0;
+    }
+    
+    .label {
+        font-size: 11px;
+        color: #999999;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+    }
+    
+    .content {
+        font-size: 13px;
+        color: #000000;
+        line-height: 1.6;
+    }
+    
+    .highlight {
+        color: #000000;
+        font-weight: 500;
+        }
+        
+        .links {
+        margin-top: 2.5rem;
+        }
+        
+        .link {
+        color: #000000;
+        text-decoration: none;
+        font-size: 13px;
+        transition: color 0.3s ease;
+    }
+    
     .link:hover {
-        color: var(--text-primary);
-    }
-    
-    .theme-toggle {
-        position: fixed;
-        top: 2rem;
-        right: 2rem;
-        width: 40px;
-        height: 40px;
-        background: transparent;
-        border: 1px solid var(--border-color);
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s ease;
-        z-index: 100;
-    }
-    
-    .theme-toggle:hover {
-        border-color: var(--text-primary);
-        transform: rotate(180deg);
-    }
-    
-    .theme-icon {
-        width: 18px;
-        height: 18px;
-        stroke: var(--text-primary);
-        fill: none;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
+        color: #6366f1;
     }
     
     @media (max-width: 768px) {
         body {
-            padding: 1.5rem;
-        }
-        
-        h1 {
-            font-size: 1.5rem;
-        }
-        
-        .subtitle {
-            font-size: 0.9375rem;
-        }
-        
-        .currently {
-            padding: 1.25rem;
-        }
-        
-        .currently-title {
-            font-size: 1rem;
-        }
-        
-        .theme-toggle {
-            top: 1.5rem;
-            right: 1.5rem;
-            width: 36px;
-            height: 36px;
-        }
-        
-        .theme-icon {
-            width: 16px;
-            height: 16px;
-        }
-        
-        .links {
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        
-        .link {
-            padding: 0.5rem 0.75rem;
-        }
-        
-        .link:not(:last-child)::after {
-            content: none;
+            padding: 2rem 1.5rem;
         }
     }
 </style>
 </head>
-<body class="dark-mode">
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <svg id="theme-icon" class="theme-icon" viewBox="0 0 24 24">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-    </button>
+<body>
+    <div class="bg-shapes">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="blob blob-5"></div>
+        <div class="blob blob-6"></div>
+        <div class="blob blob-7"></div>
+    </div>
     
     <div class="container">
-        <header>
-            <h1>Harsh Patel</h1>
-            <p class="subtitle">AI Research Engineer</p>
-            <p class="subtitle">Engineering @ University of Waterloo</p>
-        </header>
-        
-        <div class="currently">
-            <div class="currently-label">Currently</div>
-            <div class="currently-title">Autopilot AI Intern at Tesla</div>
-            <div class="currently-date">Starting January 2026</div>
+        <div class="name">
+            HARSH PATEL
         </div>
         
-        <section class="section">
-            <div class="links">
-                <a href="#" onclick="copyEmail(event)" class="link">Email</a>
-                <a href="https://www.linkedin.com/in/hp30/" target="_blank" class="link">LinkedIn</a>
-                <a href="https://github.com/harshp30" target="_blank" class="link">GitHub</a>
-                <a href="https://calendly.com/harshnpateledu/30min" target="_blank" class="link">Calendly</a>
+        <div class="meta">
+            AI Research Engineer
+        </div>
+        
+        <div class="meta">
+            Engineering - University of Waterloo
+        </div>
+        
+        <div class="section">
+            <div class="label">Incoming</div>
+            <div class="content">
+                Autopilot AI Intern at <span class="highlight">Tesla</span><br>
+                Foundation Models Team
             </div>
-        </section>
+        </div>
+        
+        <div class="links">
+            <a href="#" onclick="copyEmail(event)" class="link">EMAIL</a>
+        </div>
     </div>
 
     <script>
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('theme-icon');
-            
-            body.classList.toggle('dark-mode');
-            
-            if (body.classList.contains('dark-mode')) {
-                themeIcon.innerHTML = `
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                `;
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeIcon.innerHTML = `
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                `;
-                localStorage.setItem('theme', 'light');
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme');
-            const themeIcon = document.getElementById('theme-icon');
-            
-            // Default is dark mode (set in body class)
-            // Only switch to light if explicitly saved
-            if (savedTheme === 'light') {
-                document.body.classList.remove('dark-mode');
-                themeIcon.innerHTML = `
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                `;
-            }
-        });
-        
         function copyEmail(event) {
             event.preventDefault();
             const email = 'h329pate@uwaterloo.ca';
@@ -303,7 +270,7 @@
             navigator.clipboard.writeText(email).then(() => {
                 const link = event.target;
                 const originalText = link.textContent;
-                link.textContent = 'Copied!';
+                link.textContent = 'COPIED';
                 
                 setTimeout(() => {
                     link.textContent = originalText;
