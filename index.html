@@ -15,9 +15,9 @@
     body {
         font-family: 'JetBrains Mono', 'Courier New', monospace;
         background: #000000;
-        background-image: radial-gradient(circle, #333333 1px, transparent 1px);
+        /* background-image: radial-gradient(circle, #333333 1px, transparent 1px);
         background-size: 30px 30px;
-        background-position: 0 0;
+        background-position: 0 0; */
         color: #ffffff;
         min-height: 100vh;
         padding: 4rem 2rem;
@@ -30,7 +30,7 @@
         overflow: hidden;
     }
     
-    .bg-overlay {
+    /* .bg-overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -50,7 +50,7 @@
     
     .dot-overlay.active {
         opacity: 1;
-    }
+    } */
     
     .container {
         max-width: 500px;
@@ -138,9 +138,9 @@
 </style>
 </head>
 <body>
-    <div class="bg-overlay">
+    <!-- <div class="bg-overlay">
         <svg id="dotCanvas" class="bg-overlay"></svg>
-    </div>
+    </div> -->
     
     <div class="container">
         <div class="name">
@@ -188,7 +188,7 @@
             });
         }
         
-        // Create random dot firing effect
+        /* // Create random dot firing effect
         function createDotFiring() {
             const canvas = document.getElementById('dotCanvas');
             const svg = canvas;
@@ -283,7 +283,7 @@
                 svg.innerHTML = '';
                 createDotFiring();
             }, 150);
-        });
+        }); */
         
     </script>
 </body>
