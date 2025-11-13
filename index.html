@@ -14,8 +14,11 @@
     
     body {
         font-family: 'JetBrains Mono', 'Courier New', monospace;
-        background: #ffffff;
-        color: #000000;
+        background: #000000;
+        background-image: radial-gradient(circle, #333333 1px, transparent 1px);
+        background-size: 30px 30px;
+        background-position: 0 0;
+        color: #ffffff;
         min-height: 100vh;
         padding: 4rem 2rem;
         display: flex;
@@ -27,136 +30,26 @@
         overflow: hidden;
     }
     
-    .bg-shapes {
+    .bg-overlay {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    
+    .dot-overlay {
+        fill: #ffffff;
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
         pointer-events: none;
     }
     
-    .blob {
-        position: absolute;
-        filter: blur(60px);
-        opacity: 0.4;
-    }
-    
-    @keyframes hueRotate {
-        0% { filter: blur(60px) hue-rotate(0deg); }
-        100% { filter: blur(60px) hue-rotate(360deg); }
-    }
-    
-    .blob-1 {
-        width: 300px;
-        height: 300px;
-        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        top: 10%;
-        left: 10%;
-        animation: float1 8s ease-in-out infinite, hueRotate 12s linear infinite;
-    }
-    
-    .blob-2 {
-        width: 250px;
-        height: 250px;
-        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        top: 20%;
-        right: 15%;
-        animation: float2 7s ease-in-out infinite, hueRotate 15s linear infinite;
-    }
-    
-    .blob-3 {
-        width: 350px;
-        height: 350px;
-        background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
-        border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%;
-        top: 50%;
-        left: 5%;
-        animation: float3 9s ease-in-out infinite, hueRotate 18s linear infinite;
-    }
-    
-    .blob-4 {
-        width: 200px;
-        height: 200px;
-        background: linear-gradient(135deg, #a78bfa 0%, #6366f1 100%);
-        border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%;
-        top: 70%;
-        right: 20%;
-        animation: float4 6s ease-in-out infinite, hueRotate 14s linear infinite;
-    }
-    
-    .blob-5 {
-        width: 280px;
-        height: 280px;
-        background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
-        border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%;
-        top: 30%;
-        left: 80%;
-        animation: float5 7.5s ease-in-out infinite, hueRotate 16s linear infinite;
-    }
-    
-    .blob-6 {
-        width: 220px;
-        height: 220px;
-        background: linear-gradient(135deg, #ec4899 0%, #a78bfa 100%);
-        border-radius: 30% 70% 50% 50% / 50% 50% 50% 50%;
-        bottom: 15%;
-        left: 30%;
-        animation: float6 8.5s ease-in-out infinite, hueRotate 13s linear infinite;
-    }
-    
-    .blob-7 {
-        width: 320px;
-        height: 320px;
-        background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-        border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%;
-        bottom: 20%;
-        right: 10%;
-        animation: float7 9.5s ease-in-out infinite, hueRotate 17s linear infinite;
-    }
-    
-    @keyframes float1 {
-        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-        33% { transform: translate(150px, -200px) scale(1.1); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-        66% { transform: translate(-120px, 150px) scale(0.9); border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%; }
-    }
-    
-    @keyframes float2 {
-        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-        50% { transform: translate(-180px, 200px) scale(1.15); border-radius: 30% 70% 50% 50% / 50% 50% 50% 50%; }
-    }
-    
-    @keyframes float3 {
-        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%; }
-        25% { transform: translate(200px, -150px) scale(1.05); border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%; }
-        50% { transform: translate(-150px, -220px) scale(0.95); border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%; }
-        75% { transform: translate(-200px, 120px) scale(1.1); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-    }
-    
-    @keyframes float4 {
-        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%; }
-        50% { transform: translate(220px, -250px) scale(1.2); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-    }
-    
-    @keyframes float5 {
-        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%; }
-        33% { transform: translate(-200px, 180px) scale(1.1); border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%; }
-        66% { transform: translate(180px, -120px) scale(0.9); border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%; }
-    }
-    
-    @keyframes float6 {
-        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 30% 70% 50% 50% / 50% 50% 50% 50%; }
-        50% { transform: translate(-220px, -180px) scale(1.15); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-    }
-    
-    @keyframes float7 {
-        0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%; }
-        25% { transform: translate(180px, 200px) scale(1.05); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-        50% { transform: translate(-200px, 180px) scale(0.95); border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%; }
-        75% { transform: translate(150px, -150px) scale(1.1); border-radius: 40% 60% 70% 30% / 40% 40% 60% 60%; }
+    .dot-overlay.active {
+        opacity: 1;
     }
     
     .container {
@@ -167,15 +60,15 @@
     }
     
     .name {
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 32px;
+        font-weight: bold;
         letter-spacing: 0.05em;
         margin-bottom: 1rem;
     }
     
     .meta {
-        font-size: 13px;
-        color: #666666;
+        font-size: 16px;
+        color: #ffffff;
         margin-bottom: 0.25rem;
     }
     
@@ -185,37 +78,56 @@
     }
     
     .label {
-        font-size: 11px;
-        color: #999999;
+        font-size: 16px;
+        color: #b3b3b3;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         margin-bottom: 0.5rem;
     }
     
     .content {
-        font-size: 13px;
-        color: #000000;
+        font-size: 16px;
+        color: #ffffff;
         line-height: 1.6;
     }
     
     .highlight {
-        color: #000000;
-        font-weight: 500;
-        }
+        color: #ffffff;
+        font-weight: bold;
+    }
+    
+    .tesla-red {
+        color: #E31937;
+        font-weight: bold;
+    }
+    
+    .waterloo-gold {
+        color: #FFD54F;
+        font-weight: bold;
+    }
+    
+    .waterloo-bold {
+        color: #ffffff;
+        font-weight: bold;
+    }
         
         .links {
         margin-top: 2.5rem;
         }
         
         .link {
-        color: #000000;
+        color: #ffffff;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 16px;
         transition: color 0.3s ease;
     }
     
     .link:hover {
         color: #6366f1;
+    }
+    
+    .link[href*="linkedin"]:hover {
+        color: #0077B5;
     }
     
     @media (max-width: 768px) {
@@ -226,14 +138,8 @@
 </style>
 </head>
 <body>
-    <div class="bg-shapes">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-        <div class="blob blob-4"></div>
-        <div class="blob blob-5"></div>
-        <div class="blob blob-6"></div>
-        <div class="blob blob-7"></div>
+    <div class="bg-overlay">
+        <svg id="dotCanvas" class="bg-overlay"></svg>
     </div>
     
     <div class="container">
@@ -242,23 +148,25 @@
         </div>
         
         <div class="meta">
-            AI Research Engineer
+            AI RESEARCH ENGINEER
         </div>
         
         <div class="meta">
-            Engineering - University of Waterloo
+            <span class="waterloo-gold">UNIVERISTY</span> <span class="waterloo-bold">OF</span> <span class="waterloo-gold">WATERLOO</span>
         </div>
         
         <div class="section">
-            <div class="label">Incoming</div>
+            <div class="label">INCOMING</div>
             <div class="content">
-                Autopilot AI Intern at <span class="highlight">Tesla</span><br>
-                Foundation Models Team
+                AUTOPILOT AI INTERN AT <span class="tesla-red">TESLA</span><br>
+                FOUNDATION MODELS TEAM
             </div>
         </div>
         
         <div class="links">
-            <a href="#" onclick="copyEmail(event)" class="link">EMAIL</a>
+            <div class="label">CONTACT ME</div>
+            <a href="#" onclick="copyEmail(event)" class="link">EMAIL</a><br>
+            <a href="https://www.linkedin.com/in/hp30/" target="_blank" class="link">LINKEDIN</a>
         </div>
     </div>
 
@@ -279,6 +187,104 @@
                 console.error('Failed to copy email:', err);
             });
         }
+        
+        // Create random dot firing effect
+        function createDotFiring() {
+            const canvas = document.getElementById('dotCanvas');
+            const svg = canvas;
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height);
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+            
+            // Background dots are 30px apart (matching CSS)
+            // The radial-gradient centers dots in each 30x30 tile
+            // So dots are at the center of each tile: 15px offset from tile edges
+            const dotSpacing = 30;
+            const dotOffset = 15; // Center of each 30px tile
+            
+            // Create overlay dots matching the background pattern exactly
+            // Start from the center of the first tile
+            // Organize dots into layers by x position
+            const layers = {};
+            
+            for (let x = dotOffset; x < width; x += dotSpacing) {
+                for (let y = dotOffset; y < height; y += dotSpacing) {
+                    const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                    dot.setAttribute('cx', x);
+                    dot.setAttribute('cy', y);
+                    dot.setAttribute('r', 1); // Match background dot size
+                    dot.setAttribute('class', 'dot-overlay');
+                    svg.appendChild(dot);
+                    
+                    // Group dots by x position (layer)
+                    if (!layers[x]) {
+                        layers[x] = [];
+                    }
+                    layers[x].push({ element: dot, x: x, y: y });
+                }
+            }
+            
+            // Get sorted layer positions (left to right)
+            const layerPositions = Object.keys(layers).map(Number).sort((a, b) => a - b);
+            
+            // Fire dots from left to right like a neural network
+            function fireLeftToRight() {
+                if (layerPositions.length === 0) return;
+                
+                // Delay between layers (simulating signal propagation)
+                const layerDelay = 80 + Math.random() * 40; // 80-120ms between layers
+                
+                layerPositions.forEach((xPos, layerIndex) => {
+                    const layerDots = layers[xPos];
+                    
+                    setTimeout(() => {
+                        // Fire 1-3 random dots in this layer
+                        const numFires = 1 + Math.floor(Math.random() * 3);
+                        const shuffled = [...layerDots].sort(() => Math.random() - 0.5);
+                        
+                        for (let i = 0; i < Math.min(numFires, shuffled.length); i++) {
+                            const dot = shuffled[i];
+                            
+                            // Light up
+                            dot.element.classList.add('active');
+                            
+                            // Random duration for how long it stays lit (600ms - 1500ms)
+                            const duration = 600 + Math.random() * 900;
+                            
+                            // Fade out
+                            setTimeout(() => {
+                                dot.element.classList.remove('active');
+                            }, duration);
+                        }
+                    }, layerIndex * layerDelay);
+                });
+                
+                // Schedule next wave with random delay (2000ms - 4000ms)
+                const totalWaveTime = layerPositions.length * layerDelay;
+                const nextDelay = 2000 + Math.random() * 2000;
+                setTimeout(fireLeftToRight, totalWaveTime + nextDelay);
+            }
+            
+            // Start firing after initial delay
+            setTimeout(fireLeftToRight, 1000 + Math.random() * 1000);
+        }
+        
+        // Initialize and handle resize
+        createDotFiring();
+        
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                const svg = document.getElementById('dotCanvas');
+                svg.innerHTML = '';
+                createDotFiring();
+            }, 150);
+        });
+        
     </script>
 </body>
 </html>
